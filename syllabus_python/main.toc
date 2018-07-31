@@ -11,42 +11,45 @@
 \contentsline {chapter}{\numberline {3}Programmer en Python}{8}{chapter.3}
 \contentsline {section}{\numberline {3.1}Les bonnes pratiques du programmeur}{8}{section.3.1}
 \contentsline {section}{\numberline {3.2}Affichage de texte}{8}{section.3.2}
+\contentsline {subsubsection}{Exercices}{8}{section*.3}
 \contentsline {section}{\numberline {3.3}Commentaires}{9}{section.3.3}
+\contentsline {subsubsection}{Exercice}{9}{section*.4}
 \contentsline {section}{\numberline {3.4}Variables}{9}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Taille}{10}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Type natif}{10}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}\textit {Cast} d'une variable}{10}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.3}\textit {Cast} d'une variable}{11}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Affectation de variables}{11}{subsection.3.4.4}
 \contentsline {subsection}{\numberline {3.4.5}Op\IeC {\'e}rations arithm\IeC {\'e}tiques}{11}{subsection.3.4.5}
 \contentsline {subsection}{\numberline {3.4.6}Sucre syntaxique}{12}{subsection.3.4.6}
-\contentsline {subsubsection}{Exercices}{12}{section*.3}
-\contentsline {section}{\numberline {3.5}Le type \texttt {str}}{12}{section.3.5}
+\contentsline {subsubsection}{Exercices}{12}{section*.5}
+\contentsline {section}{\numberline {3.5}Le type \texttt {str}}{13}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Op\IeC {\'e}rations sur les \texttt {String}}{13}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Exercices}{13}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.2}Exercices}{14}{subsection.3.5.2}
 \contentsline {section}{\numberline {3.6}Interaction avec l'utilisateur}{14}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}Exercice : }{14}{subsection.3.6.1}
 \contentsline {section}{\numberline {3.7}Les conditions}{14}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Outils de comparaison}{14}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.1}Outils de comparaison}{15}{subsection.3.7.1}
 \contentsline {subsection}{\numberline {3.7.2}Op\IeC {\'e}rateurs logiques}{15}{subsection.3.7.2}
-\contentsline {paragraph}{Table logique}{15}{section*.4}
-\contentsline {paragraph}{En python}{15}{section*.5}
-\contentsline {subsubsection}{Combinaisons}{15}{section*.6}
-\contentsline {subsubsection}{Le \texttt {if}}{16}{section*.7}
+\contentsline {paragraph}{Table logique}{15}{section*.6}
+\contentsline {paragraph}{En python}{15}{section*.7}
+\contentsline {subsubsection}{Combinaisons}{16}{section*.8}
+\contentsline {subsubsection}{Le \texttt {if}}{16}{section*.9}
 \contentsline {subsection}{\numberline {3.7.3}Le \texttt {elif}}{17}{subsection.3.7.3}
 \contentsline {subsection}{\numberline {3.7.4}Code mort}{17}{subsection.3.7.4}
-\contentsline {subsection}{\numberline {3.7.5}Exercice}{17}{subsection.3.7.5}
+\contentsline {subsubsection}{Exercices}{18}{section*.10}
 \contentsline {section}{\numberline {3.8}Boucles}{18}{section.3.8}
 \contentsline {subsection}{\numberline {3.8.1}La boucle \texttt {while}}{18}{subsection.3.8.1}
-\contentsline {subsubsection}{Fonctionnement}{18}{section*.8}
-\contentsline {subsubsection}{Attention \IeC {\`a} la boucle infinie!}{18}{section*.9}
-\contentsline {subsection}{\numberline {3.8.2}La boucle \texttt {for}}{18}{subsection.3.8.2}
+\contentsline {subsubsection}{Fonctionnement}{18}{section*.11}
+\contentsline {subsubsection}{Attention \IeC {\`a} la boucle infinie!}{18}{section*.12}
+\contentsline {subsection}{\numberline {3.8.2}La boucle \texttt {for}}{19}{subsection.3.8.2}
 \contentsline {subsection}{\numberline {3.8.3}Le \texttt {break}}{19}{subsection.3.8.3}
-\contentsline {subsection}{\numberline {3.8.4}Exercices : }{19}{subsection.3.8.4}
-\contentsline {section}{\numberline {3.9}Fonctions}{20}{section.3.9}
-\contentsline {subsection}{\numberline {3.9.1}Cr\IeC {\'e}er ses propres fonctions}{20}{subsection.3.9.1}
-\contentsline {subsection}{\numberline {3.9.2}Exercices :}{20}{subsection.3.9.2}
-\contentsline {section}{\numberline {3.10}Port\IeC {\'e}e des variables}{21}{section.3.10}
-\contentsline {section}{\numberline {3.11}Modules}{22}{section.3.11}
-\contentsline {section}{\numberline {3.12}Listes}{22}{section.3.12}
-\contentsline {section}{\numberline {3.13}Classes et objets}{23}{section.3.13}
-\contentsline {chapter}{\numberline {4}Conclusion}{25}{chapter.4}
+\contentsline {subsection}{\numberline {3.8.4}Exercices : }{20}{subsection.3.8.4}
+\contentsline {section}{\numberline {3.9}Listes}{20}{section.3.9}
+\contentsline {subsubsection}{Exercices}{21}{section*.13}
+\contentsline {section}{\numberline {3.10}Fonctions}{21}{section.3.10}
+\contentsline {subsection}{\numberline {3.10.1}Cr\IeC {\'e}er ses propres fonctions}{22}{subsection.3.10.1}
+\contentsline {subsection}{\numberline {3.10.2}Exercices :}{22}{subsection.3.10.2}
+\contentsline {section}{\numberline {3.11}Port\IeC {\'e}e des variables}{22}{section.3.11}
+\contentsline {section}{\numberline {3.12}Modules}{23}{section.3.12}
+\contentsline {section}{\numberline {3.13}Classes et objets}{24}{section.3.13}
+\contentsline {chapter}{\numberline {4}Conclusion}{26}{chapter.4}
