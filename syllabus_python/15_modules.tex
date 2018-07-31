@@ -1,0 +1,25 @@
+On a déjà vu quelques fonctions inclues de base dans \textsc{Python}. Mais tout n'est pas présent, loin de là : un programme peut être utilisé pour afficher une interface graphique, travailler avec des images, accéder au web, faire des calculs mathématiques avancés, lire de l'audio ou de la vidéo, faire un jeu 3D... Ces quelques exemples montrent à quel point on peut se servir d'un seul langage pour faire à peu près tout et n'importe quoi!
+
+Alors comment commencer? Chaque développeur pourrait bien sûr écrire de zéro chaque fonction donc il a besoin. Mais ce serait un travail immense, et on risque de faire des erreurs. Ainsi, les développeurs se sont organisés : ils ont regroupé des fonctions déjà écrites dans ce qu'on appelle des \textit{modules}. Il suffit d'importer un modules pour avoir accès à toutes ses fonctions!
+
+Voici comment on importe un module, par exemple pour avoir accès à des fonctions mathématiques plus avancées :
+
+\begin{python}
+import math # importation du module math
+
+x = math.ceil(8.728)
+print(x) # imprime le premier entier superieur ou egal au parametre
+\end{python}
+
+Pour utiliser les fonctions du module, on écrit \lstinline{module.fonction()}.
+
+Et si on n'a pas envie de taper à chaque fois le nom du module? On peut importer directement la fonction!
+
+\begin{python}
+from math import ceil # importe juste la fonction ceil
+
+x = ceil(8.728)
+print(x) # imprime le premier entier superieur ou egal au parametre
+\end{python}
+
+On peut aussi importer toutes les fonctions avec la ligne \lstinline{from module import *}.

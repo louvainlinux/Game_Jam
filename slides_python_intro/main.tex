@@ -1,0 +1,198 @@
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[xcolor=table]{beamer}
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+%\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage{color}
+\usepackage{graphics}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+
+\usepackage{listings}
+\lstset{language=Java}
+\usepackage{verbatim}
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Stage Python]{TechnofuturTic - Stage Python \& Raspberry Pi} % The short title appears at the bottom of every slide, the full title is only on the title page
+\subtitle{Introduction}
+\titlegraphic{\includegraphics[scale=0.5]{./Ressources/Logo.png}}
+
+\author[] {\\Florence Blondiaux \\ Jean-Martin Vlaeminck} % Your name
+\institute[] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Université Catholique de Louvain \\ % Your institution for the title page
+\medskip
+
+}
+\date{06/08/18 au 10/08/18}
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+
+%------------------------------------------------
+
+
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{Déroulement de la semaine}
+    \begin{itemize}
+        \item Prise de contact
+        \item Initiation à Python
+        \item Découverte Raspberry Pi
+        \item Projet 1 : jeu Raspberry Pi
+        \item Projet 2 : station météo %TODO projet ?
+        \item Présentation aux parents
+    \end{itemize}
+\end{frame}
+
+\section{Organisation}
+
+\begin{frame}
+\frametitle{Travail}
+    \textbf{Travail en groupe}
+    \begin{itemize}
+        \item 2 ou 3 personnes
+        \item Collaboration/entraide très importante en informatique!
+        \item Plus on est de fous, plus on rit!
+    \end{itemize}
+    
+    \textbf{En pratique}
+    \begin{itemize}
+        \item Explication de la théorie avec slides
+        \item Petits exercices pour s'entraîner
+        \item Corrections et réponses aux questions
+        \item Réalisation de projets
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Planning} 
+\begin{table}[]
+	\begin{tabular}{|l|l|l|l|l|}
+		\hline
+		\rowcolor[HTML]{CA4242} 
+		{\color[HTML]{000000} Lundi}                                                           & {\color[HTML]{000000} Mardi}                                       & {\color[HTML]{000000} Mercredi}                                           & {\color[HTML]{000000} Jeudi}                                   & {\color[HTML]{000000} Vendredi} \\ \hline
+		\begin{tabular}[c]{@{}l@{}}Introduction au\\ Raspberry,\\ Premier \\programme\end{tabular} & \begin{tabular}[c]{@{}l@{}}Python\\ Types\\ Fonctions\end{tabular} & \begin{tabular}[c]{@{}l@{}}Python \\ Conditions\\ Boucles\end{tabular} & \begin{tabular}[c]{@{}l@{}}Coder un \\jeu: PyGame\end{tabular} & Station Météo                   \\ \hline
+	\end{tabular}
+\end{table}
+    
+\end{frame}
+    
+
+
+\section{A propos de vous...} %TODO
+
+\begin{frame}
+    \frametitle{A propos de vous...}
+    \begin{itemize}
+    \item Prénom
+    \item Âge et année d'étude
+    \item Déjà fait de la programmation? En Python?
+    \item Connaissance de Raspberry Pi?
+    \item Attentes envers ce stage
+    \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SÉPARATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% \begin{frame}
+% \frametitle{SÉPARATION}
+% \begin{block}{Définition Wikipédia \textit{Intelligence Artificielle}}
+% L'intelligence artificielle est la "recherche de moyens susceptibles de doter les systèmes informatiques de capacités intellectuelles comparables à celles des êtres humains".\\
+% \end{block}
+% \begin{itemize}
+% \item Capacité d'une machine à "réfléchir"
+% \item Une machine qui exécute des tâches répétitives, pré-programmées peut sembler intelligentes sans pour autant être dotée d'une IA
+% \end{itemize}
+% \end{frame}
+
+\end{document}

@@ -1,0 +1,20 @@
+Pour l'instant, nous nous limitons à des programmes dans lesquels toutes les valeurs sont définies avant l'exécution du programme. Ce qui nous limite assez fortement dans le genre de problèmes que l'on peut résoudre. Nous allons ici apprendre à demander à l'utilisateur de rentrer de l'information. 
+
+On peut voir cette pratique comme lorsque Google vous demande un mot-clé à rechercher, lorsqu'un jeu vidéo vous demande un nom pour votre héros, etc...
+
+La fonction qui permet cette opération s'appelle \texttt{input}. Par défaut, cette fonction convertit toutes les données entrées par l'utilisateur en \texttt{String} mais on peut imposer de recevoir un type en particulier en \textit{castant} la réponse de l'utilisateur dans le type désiré. 
+
+\begin{python}[caption = fonction \texttt{input}]
+answer = raw_input("ce_qu_on_affiche_a_l_utilisateur")
+#Exemple
+nom = input("Quel est votre nom ?")
+prenom = input("Quel est votre prenom ?")
+age = int(input("Quel est votre age ?"))
+print "Bonjour " + nom + " " + prenom + " vous etes age de " + str(age) + " ans!"
+\end{python}
+
+
+\subsection{Exercice : } Faites un convertisseur qui demande à l'utilisateur des kilomètres et qui lui renvoie ce chiffre converti en miles en le remerciant d'avoir utilisé votre programme.
+
+\textit{Aide : 1 km = 0.621 mile}
+\label{convertisseur}

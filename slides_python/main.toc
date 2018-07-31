@@ -1,0 +1,11 @@
+\beamer@sectionintoc {1}{Pr\IeC {\'e}sentation}{2}{0}{1}
+\beamer@sectionintoc {2}{Hello World!}{6}{0}{2}
+\beamer@sectionintoc {3}{Variables}{14}{0}{3}
+\beamer@sectionintoc {4}{Strings}{21}{0}{4}
+\beamer@sectionintoc {5}{Conditions}{29}{0}{5}
+\beamer@sectionintoc {6}{R\IeC {\'e}capitulatif}{41}{0}{6}
+\beamer@sectionintoc {7}{Boucles}{43}{0}{7}
+\beamer@sectionintoc {8}{Listes}{51}{0}{8}
+\beamer@sectionintoc {9}{IO}{57}{0}{9}
+\beamer@sectionintoc {10}{Fonctions}{65}{0}{10}
+\beamer@sectionintoc {11}{Objets}{73}{0}{11}

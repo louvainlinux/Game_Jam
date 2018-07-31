@@ -1,0 +1,32 @@
+Dans votre matériel, vous disposez d'un capteur d'humidité et de température. Il est possible de le connecter au Raspberry Pi, et de récupérer les données grâce à... Python!
+
+Il faut d'abord installer le module correspondant. L'installation nécessite quelques commandes à taper dans le terminal :\\
+\begin{lstlistings}
+sudo apt-get update\\
+sudo apt-get install build-essential python-dev\\
+wget https://github.com/adafruit/Adafruit\_Python\_DHT/archive/master.zip\\
+unzip master.zip\\
+cd Adafruit\_Python\_DHT-master/\\
+sudo python setup.py install\\
+\end{lstlistings}
+
+Ensuite, on peut écrire un script en Python pour lire la température et l'humidité.
+
+\begin{python}
+# module du senseur
+import Adafruit_DHT
+
+# Pin GPIO
+pin = 23
+
+# lit les donnees, et les enregistre dans des variables humidity et temperature
+humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
+
+# affiche les donnees, ou un message d'erreur
+if humidity is not None and temperature is not None:
+    print('Temperature={0:0.1f}*C  Humidite={1:0.1f}%'.format(temperature, humidity))
+else:
+    print('Erreur de lecture, reessayez!')
+\end{python}
+
+C'est juste un exemple d'utilisation du module, mais avec tout ce qu'on a déjà appris, on va pouvoir faire des choses bien plus intéressantes!

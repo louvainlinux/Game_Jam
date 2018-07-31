@@ -1,0 +1,44 @@
+\BOOKMARK [0][-]{chapter.1}{A quoi s'attendre?}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Plan de la semaine}{chapter.1}% 2
+\BOOKMARK [0][-]{chapter.2}{Pr\351sentation de Python et installation des outils}{}% 3
+\BOOKMARK [1][-]{section.2.1}{Pr\351sentation de Python}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.2}{Qu'est-ce qu'un programme?}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.3}{Environnement de d\351veloppement}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.3.1}{Installer Spyder}{section.2.3}% 7
+\BOOKMARK [2][-]{subsection.2.3.2}{Pr\351sentation de l'interface}{section.2.3}% 8
+\BOOKMARK [1][-]{section.2.4}{Premier programme}{chapter.2}% 9
+\BOOKMARK [0][-]{chapter.3}{Programmer en Python}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Les bonnes pratiques du programmeur}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Affichage de texte}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Commentaires}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.4}{Variables}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.4.1}{Taille}{section.3.4}% 15
+\BOOKMARK [2][-]{subsection.3.4.2}{Type natif}{section.3.4}% 16
+\BOOKMARK [2][-]{subsection.3.4.3}{Cast d'une variable}{section.3.4}% 17
+\BOOKMARK [2][-]{subsection.3.4.4}{Affectation de variables}{section.3.4}% 18
+\BOOKMARK [2][-]{subsection.3.4.5}{Op\351rations arithm\351tiques}{section.3.4}% 19
+\BOOKMARK [2][-]{subsection.3.4.6}{Sucre syntaxique}{section.3.4}% 20
+\BOOKMARK [1][-]{section.3.5}{Le type str}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.5.1}{Op\351rations sur les String}{section.3.5}% 22
+\BOOKMARK [2][-]{subsection.3.5.2}{Exercices}{section.3.5}% 23
+\BOOKMARK [1][-]{section.3.6}{Interaction avec l'utilisateur}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.6.1}{Exercice : }{section.3.6}% 25
+\BOOKMARK [1][-]{section.3.7}{Les conditions}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.7.1}{Outils de comparaison}{section.3.7}% 27
+\BOOKMARK [2][-]{subsection.3.7.2}{Op\351rateurs logiques}{section.3.7}% 28
+\BOOKMARK [2][-]{subsection.3.7.3}{Le elif}{section.3.7}% 29
+\BOOKMARK [2][-]{subsection.3.7.4}{Code mort}{section.3.7}% 30
+\BOOKMARK [2][-]{subsection.3.7.5}{Exercice}{section.3.7}% 31
+\BOOKMARK [1][-]{section.3.8}{Boucles}{chapter.3}% 32
+\BOOKMARK [2][-]{subsection.3.8.1}{La boucle while}{section.3.8}% 33
+\BOOKMARK [2][-]{subsection.3.8.2}{La boucle for}{section.3.8}% 34
+\BOOKMARK [2][-]{subsection.3.8.3}{Le break}{section.3.8}% 35
+\BOOKMARK [2][-]{subsection.3.8.4}{Exercices : }{section.3.8}% 36
+\BOOKMARK [1][-]{section.3.9}{Fonctions}{chapter.3}% 37
+\BOOKMARK [2][-]{subsection.3.9.1}{Cr\351er ses propres fonctions}{section.3.9}% 38
+\BOOKMARK [2][-]{subsection.3.9.2}{Exercices :}{section.3.9}% 39
+\BOOKMARK [1][-]{section.3.10}{Port\351e des variables}{chapter.3}% 40
+\BOOKMARK [1][-]{section.3.11}{Modules}{chapter.3}% 41
+\BOOKMARK [1][-]{section.3.12}{Listes}{chapter.3}% 42
+\BOOKMARK [1][-]{section.3.13}{Classes et objets}{chapter.3}% 43
+\BOOKMARK [0][-]{chapter.4}{Conclusion}{}% 44

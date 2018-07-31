@@ -1,0 +1,57 @@
+Avant d’avancer plus en profondeur, il est utile de définir quelques mots de vocabulaire.
+\begin{itemize}
+    \item Une classe est une définition d’un concept. Elle peut être agrémentée d’attributs et de
+fonctions pour la caractériser.
+    \item Un objet est une instance d’une classe, c'est-à-dire que son comportement est défini par la
+classe.
+\end{itemize}
+
+Si l’on prend l’exemple d’un véhicule, son plan de fabrication et de fonctionnement correspond à la classe.
+Une voiture concrète, qui possède ses propres caractéristiques, correspond à un objet de cette classe. Et on peut construire plusieurs voitures à partir d'un seul plan, et les personnaliser en changeant ses options (attributs!).
+
+Une classe possède des attributs qui sont eux-mêmes des objets (de différents types), et des méthodes qui sont des fonctions qui s'appliquent sur les objets de cette classe.
+Le mot-clef \texttt{self} permet de référencer l'objet sur lequel on est en train de travailler.
+Il est implicitement passé en argument à toutes les méthodes.
+Le constructeur est une méthode particulière de la classe : il permet de créer un nouvel objet.
+
+\begin{python}[caption = Exemple de classe]
+class Vehicule:
+
+    """Attributs"""
+    
+    #Valeurs par defaut
+    nombreRoues = 4
+    nombrePortes = 5
+    nombrePlaces = 5
+    couleur = 'noir'
+    kilometres = 0
+    
+    """Methodes"""
+    
+    #Constructeur, permet de creer un objet vehicule avec un certain prix
+    def __init__(self, prix):
+        self.prix = prix
+    
+    #Modificateur, permet de changer la couleur
+    def setColor(self, couleur):
+        self.couleur = couleur
+        
+    #Calculateur de TVA (taxe de 21%)
+    def tva(self):
+        return self.prix * 0.21
+    
+    #Faire rouler le vehicule
+    def rouler(self, distance)
+        self.kilometres += distance
+\end{python}
+
+On peut ensuite utiliser cette classe pour créer une voiture, et s'en servir.
+
+\begin{python}[caption = Exemple de classe]
+voiture = Vehicule(10000)              #Cree une voiture au prix de 10 000 euros
+facture = voiture.prix + voiture.tva() #Total a payer
+voiture.rouler(200)                    #Roule sur 200km
+voiture.setColor('red')                #Peint la voiture en rouge
+voiture.rouler(150)                    #Roule sur 150km
+print(voiture.distance)                #Affiche 350
+\end{python}

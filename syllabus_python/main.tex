@@ -1,0 +1,287 @@
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+\usepackage{pdfpages}
+\title{Syllabus : Python et Raspberry Pi}
+\author{Florence Blondiaux\
+       Jean-Martin Vlaeminck}
+\date{06 août - 10 août 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{listings}   
+\usepackage{makecell}
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{9} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{9}  % for normal% incl. code langages info
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\newcommand\pythonstyle{\lstset{
+  language=Python,
+  backgroundcolor=\color{white}, %%%%%%%
+  basicstyle=\ttm,
+  otherkeywords={self},            
+  keywordstyle=\ttb\color{deepblue},
+  emph={MyClass,__init__},          
+  emphstyle=\ttb\color{deepred},    
+  stringstyle=\color{deepgreen},
+  commentstyle=\color{red},  %%%%%%%%
+  frame=tb,                         
+  showstringspaces=False            
+}}
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+\usepackage{lipsum}                         % faux texte
+\usepackage{fullpage}                       % utilisation de toute la page.
+\usepackage{csvsimple}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{xcolor}
+\definecolor{darkgreen}{rgb}{0.13,0.54,0.13}
+\usepackage{setspace}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+
+
+
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\chapter{A quoi s'attendre?}
+
+\vspace*{3cm}
+
+Durant ce stage, nous allons aborder les points suivant :
+
+
+\begin{minipage}[l]{0.70\textwidth}
+	\begin{enumerate}
+		\item Nous allons étudier le langage de programmation \textbf{PYTHON}. Ce langage va permettre aux étudiants d'interagir avec le raspberry pi et sera utile pour atteindre les objectifs fixés par le stage. Nous reprendrons les bases puis nous approfondirons la matière progressivement. De nombreux exercices accompagneront l'élève durant cet apprentissage.\\
+		
+		\item Nous découvrirons également comment intéragir avec le \textbf{raspberry pi}. Nous verrons les bases de linux, le coeur du système d'exploitation du raspberry. 
+		
+		% \item En fin de semaine nous réaliserons une petite \textit{station météo} ou un \textit{jeu video} sur le raspberry pi.
+	\end{enumerate}
+\end{minipage}
+\hfill
+\begin{minipage}[r]{0.30\textwidth}
+	\includegraphics[width=\textwidth]{Ressources/python.png}
+	\bigskip
+	\includegraphics[width=\textwidth]{Ressources/pi.png}
+\end{minipage}
+
+\bigskip
+Vous disposez chacun d'un raspberry pi permettant de résoudre les exercices proposés. Cependant n'hésitez pas à dialoguer avec vos voisins concernant votre solution. En informatique, nous appelons cette
+technique le \textbf{pair programming}. Une telle méthode de travail
+permet à la fois de rendre l'apprentissage plus agréable et plus
+efficace.
+
+\section*{Syllabus}
+Ce syllabus 
+%rédigé par Nicolas Houtain et Nathan Magrofuoco, a été modifié par Henri Devillez et Maxime Dimidschstein, étudiants en ingénieur civil à l'Université Catholique de Louvain. Cet ouvrage est partiellement inspiré du syllabus rédigé en 2012 par Gaëtan Biot et Sébastien De Fauw. 
+est destiné à des élèves de 12 à 18 ans assistant aux stages d'été organisé par Technofutur TIC. Ce syllabus est un complément aux slides et aux discussions proposées durant les séances de ce stage. Il doit être complété par l'élève selon ses notes personnelles et les exercices réalisés durant la semaine.
+
+Le syllabus a été écrit sous forme d'activités. Chaque activité peut être vue comme un exercice permettant de découvrir la matière. Cela permet d'apprendre la théorie de façon ludique et pratique.
+
+\section{Plan de la semaine}
+
+Ce plan est donné à titre informatif, il pourra être modifié selon les circonstances et les envies du groupe.\\
+\begin{table}[h!]
+	\begin{tabular}{|l|l|l|l|l|}
+		\hline
+		\rowcolor[HTML]{CA4242} 
+		{\color[HTML]{000000} Lundi}                                                           & {\color[HTML]{000000} Mardi}                                       & {\color[HTML]{000000} Mercredi}                                           & {\color[HTML]{000000} Jeudi}                                   & {\color[HTML]{000000} Vendredi} \\ \hline
+		\begin{tabular}[c]{@{}l@{}}Introduction au\\ Raspberry,\\ Premier \\programme\end{tabular} & \begin{tabular}[c]{@{}l@{}}Python\\ Types\\ Fonctions\end{tabular} & \begin{tabular}[c]{@{}l@{}}Python \\ Conditions\\ Boucles\end{tabular} & \begin{tabular}[c]{@{}l@{}}Coder un \\jeu: PyGame\end{tabular} & Station Météo %TODO                
+		   \\ \hline
+	\end{tabular}
+\end{table}
+
+
+%LE FAIRE SOUS TABLEAU COMME EN 2006 \\
+%\begin{landscape}
+%\begin{tabular}{|c|c|c|c|c|}
+%\hline 
+%Lundi & Mardi & Mercredi & Jeudi & Vendredi \\ 
+%\hline 
+%\multirow{2}{*}{} - Se présenter & - Révisions du lundi & - Révisions du mardi & - Révisions du mercredi & - Révisions du jeudi \\
+% - Présentation de la semaine & - Présentation du projet & - Construire une classe & - Projet & - Projet \\
+% - Questionnaire & & & & \\
+%\hline 
+%BREAK & BREAK & BREAK & BREAK & BREAK \\ 
+%\hline 
+%\multirow{2}{*}{} - Introduction à Java & - Première réflexion & - Projet & - Projet & - Projet \\
+% - Exercices sur Java &  - Projet &  &  &  \\
+%\hline 
+%BREAK & BREAK & BREAK & BREAK & BREAK \\  
+%\hline 
+%\multirow{2}{*}{} - Classes, méthodes, .. & - Projet & - Projet & - Projet & - Projet \\
+%- Exercices sur Java & - Première réflexion IA &  & - Améliorations IA &  \\
+%\hline 
+%BREAK & BREAK & BREAK & BREAK & BREAK \\ 
+%\hline 
+%\multirow{2}{*}{} - Bilan de la journée & - Révisions du lundi & - Révisions du mardi & - Révisions du mercredi & - Révisions du jeudi \\
+% - Cloture & - Présentation du projet & - Construire une classe & - Projet & - Projet \\
+%\hline 
+%\end{tabular} 
+%\end{landscape}
+
+
+
+
+
+
+
+\chapter{Présentation de Python et installation des outils}
+
+\section{Présentation de Python}
+\input{02_presentation_python}
+
+\section{Qu'est-ce qu'un programme?}
+\input{03_programme}
+
+\section{Environnement de développement}
+\input{04_environnement_dev}
+
+\section{Premier programme}
+\input{05_premier_programme}
+
+
+
+
+
+
+
+
+\chapter{Programmer en Python}
+%Ordre d'apprentissage à discuter
+Maintenant que vous savez écrire un programme ainsi que l'exécuter et que vous avez écrit votre premier code, nous pouvons passer aux concepts de base de \textsc{Python}.
+
+\section{Les bonnes pratiques du programmeur}
+\input{06_bonnes_pratiques}
+
+\section{Affichage de texte}
+\input{07_affichage_texte}
+
+\section{Commentaires}
+\input{08_commentaires}
+
+\section{Variables}
+\label{variables}
+\input{09_variables}
+
+\section{Le type \texttt{str}}
+\input{10_string}
+
+\section{Interaction avec l'utilisateur}
+\input{11_interactions_utilisateur}
+
+\section{Les conditions}
+\input{12_conditions}
+
+\section{Boucles}
+\input{13_boucles}
+
+\section{Fonctions}
+\input{14_fonctions}
+
+\section{Portée des variables}
+\input{13b_portee_variables}
+
+\section{Modules}
+\input{15_modules}
+
+\section{Listes}
+\input{16_listes}
+
+% \section{(Optionnel) Dictionnaires}
+% %TODO
+
+% \section{(Optionnel) Tuples}
+% %TODO
+
+\section{Classes et objets}
+\input{17_classes}
+%TODO
+
+%\section{Héritage}
+%TODO
+
+%\section{Exercices supplémentaires}
+%TODO
+
+
+
+
+
+
+
+
+
+%
+%\chapter{Raspberry Pi}
+%
+%\section{Présentation}
+%\input{91_presentation}
+%
+%\section{Mise en place}
+%\input{92_mise_en_place}
+%
+%\section{Installation de l'OS}
+%\input{93_installation_os}
+%
+%\section{Terminal}
+%\input{95_terminal}
+%
+%\section{Accéder au Raspberry Pi}
+%\input{97_acces}
+%
+%\section{Mettre à jour son Raspberry Pi}
+%\input{94_mise_a_jour}
+%
+%\section{Installer Python 3}
+%Par défaut, le Raspberry Pi n'est plus livré avec Python 3. Heureusement, c'est facile à installer! Tapez successivement les lignes suivantes dans le terminal :\\
+%\begin{lstlistings}
+%wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tgz\\
+%tar xzvf Python-3.6.0.tgz\\
+%cd Python-3.6.0/\\
+%./configure\\
+%make\\
+%sudo make install\\
+%\end{lstlistings}
+%
+%\section{Mini-jeu}
+%Exercice à réaliser en cours.
+%
+%\section{Capteur d'humidité et de température}
+%\input{98_capteur}
+%
+
+\chapter{Conclusion}
+
+Durant cette semaine, vous avez appris les bases du Python : variables, conditions, boucles, fonctions, listes, etc. On a donné un introduction à la programmation orienté-objet. Libre à vous désormais de poursuivre cet apprentissage! Le Python est un des langages les plus utilisés, ce qui veut dire qu'il y a aussi énormément de ressources en ligne pour apprendre par soi-même.
+
+On pense notamment à l'excellent OpenClassrooms \footnote{\url{https://openclassrooms.com/courses/apprenez-a-programmer-en-python}}, ou à ce tutoriel sur Développez.com \footnote{\url{https://python.developpez.com/cours/apprendre-python3/}}.\\
+
+Vous avez aussi découvert le Raspberry Pi. Étonnant petit ordinateur, il n'en est pas moins capable! D'autres curieux tels que vous ont utilisé leur Raspberry Pi dans des projets surprenants! Certains sont listés sur Instructables\footnote{\url{http://www.instructables.com/id/Raspberry-Pi-Projects/}}, avec des explications pas-à-pas.\\
+
+Enfin, nous espérons que vous avez apprécié ce stage, et que vous continuerez à explorer les infinies possibilités de l'informatique!
+
+
+\includepdf[pages={1,2}]{memento.pdf}
+\end{document}

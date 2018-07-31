@@ -1,0 +1,1256 @@
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[handout]{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+%\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage{graphics}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+% Default fixed font does not support bold face
+\usepackage{tabularx}
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{9} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{9}  % for normal% incl. code langages info
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\usepackage{listings}
+\usepackage{xcolor}
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+commentstyle=\color{red},
+frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}}
+
+\AtBeginSection{\frame{\sectionpage}}
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Stage Python]{TechnofuturTic - Stage Python \& Raspberry Pi} % The short title appears at the bottom of every slide, the full title is only on the title page
+\subtitle{Python}
+\titlegraphic{\includegraphics[scale=0.5]{./Ressources/Logo.png}}
+
+\author[] {\\Florence Blondiaux \\ Jean-Martin Vlaeminck} % Your name
+\institute[] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+	Université Catholique de Louvain \\ % Your institution for the title page
+	\medskip
+	
+}
+\date{06/08/18 au 10/08/18}
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+
+%------------------------------------------------
+
+
+\section{Présentation}
+
+\begin{frame}
+\frametitle{Langage de programmation}
+    \begin{block}{Définition Wikipédia LANGAGE}
+    Le langage est la capacité d'exprimer une pensée et de communiquer au moyen d'un système de signes (vocaux, gestuel, graphiques, tactiles, olfactifs, etc.)...
+    \end{block}
+    \textbf{Simplification}: Moyen de communication entre deux entités (personnes, machines, ...)\\
+    Exemple: français, néerlandais, anglais, espagnol,...
+\end{frame}
+
+\begin{frame}
+\frametitle{Pourquoi Python?}
+    \begin{itemize}
+    \item Langage de haut niveau $\rightarrow$ pas de programmation avec des 0 et 1 comme dans les films
+    \item Multiplateforme : Windows, OS X, Linux,...
+    \item Gratuit
+    \item Programmes clairs et structurés
+    \item Pratique pour les débutants
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Installation et fonctionnement}
+\center{Démonstration en direct. \\ Installer un environement de développement. } %TODO
+\end{frame}
+
+\section{Hello World!}
+%Premier programme + trucs de base (genre commentaires)
+
+\begin{frame}
+\frametitle{Premier programme}
+    \begin{itemize}
+    \item Le célèbre "Hello World!" ("Bonjour Monde!", en Français)
+    \item Un programme simple qui affiche un petit texte à l'écran
+    \item Permet d'apprendre à exécuter un programme Python
+    \end{itemize}
+\end{frame}
+
+% CODE HELLO WORLD
+\defverbatim[colored]\helloworld{
+\begin{python}
+print("Hello World")
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Le programme}
+Un programme très très (très ?) compliqué :
+    \helloworld
+\end{frame}
+
+\begin{frame}
+\frametitle{Explications}
+    La fonction \texttt{print()} permet d'afficher à la console tout ce qui se trouve dans la parenthèse que la suit.
+\end{frame}
+
+\begin{frame}
+\frametitle{A vous de jouer !}
+    \begin{block}{Mission}
+    Modifier le code pour que l'ordinateur affiche "Bonjour maman"
+    \end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Commentaires}
+    Outils essentiels utilisés pour donner des indications à la personne qui lit votre programme. Ces phrases sont ignorées lors de l'exécution du programme ! \\
+    \textbf{En python : }On commente une phrase en la précédant du symbole \# et on commente un texte en le précédant de """ et en le terminant avec """\footnote{Attention pas d'accents ni de symboles chelous dans les commentaires !}.
+\end{frame}
+% CODE Commentaire
+\defverbatim[colored]\comm{
+\begin{python}
+"""Ce superbe programme vous est offert par
+les entreprises Moumal. Attention il doit 
+etre utilise avec moderation ! L abus de
+python est dangereux pour la sante, ..."""
+print("salut") #Imprime salut
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Le programme}
+Un programme commenté :
+    \comm
+\end{frame}
+\begin{frame}
+\frametitle{A vous de jouer !}
+    \begin{block}{Mission}
+    Commenter le code de l'exercice précédent en précisant \textbf{l'auteur du code}, \textbf{la date de création}, \textbf{le lieu de création} et expliquer ce que fait l'instruction \texttt{print} pour quelqu'un n'ayant jamais fait de Python. 
+    \end{block}
+\end{frame}
+\section{Variables}
+\begin{frame}
+\frametitle{Variables}
+\textbf{Qu'est ce qu'une variable ?} Les variables sont des symboles qui associent un nom à une valeur. La valeur est stockée dans la mémoire de l'ordinateur et le nom permet d'y accéder et/ou de modifier la valeur en tout temps. Une variable possède toujours un \textbf{type}. Ce dernier renseigne sur la nature de la valeur stockée dans la variable.
+\end{frame}
+\defverbatim[colored]\var{
+\begin{python}
+nom_de_variable = valeur
+#Exemples de variables correctes
+variable1 = 1 #nom : variable1, valeur : 1
+b = "salut"   #nom : b, valeur : "salut"
+variable68452 = 0.50
+variable_au_nom_tres_long = True
+variable_lettre = 'a'
+\end{python}
+}
+\begin{frame}
+\frametitle{En python}
+Les noms de variables ne peuvent pas commencer par un chiffre, ni contenir d'espaces, ni contenir d'accents.
+\var
+\end{frame}
+\defverbatim[colored]\type{
+\begin{python}[caption = Types de variables]
+niveau = "E"  #variable de type str
+chaises = 12  #variable de type int
+sonActif = False  #variable de type boolean
+prixJeu = 12.50  #variable de type float
+totalVoitures = 3453454  #variable de type int
+\end{python}
+}
+\begin{frame}
+\frametitle{Types}
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Type & Description \\
+        \hline
+        \texttt{boolean} & Représente \textit{True} (vrai) ou \textit{False} (faux) \\
+        \hline
+        \texttt{str} & Représente une chaîne de caractères \\
+        \hline
+        %\texttt{byte} & & 1 octet \\
+        %\texttt{short} & & 2 octets  \\
+        \texttt{int} & Représente un entier\\
+        %\texttt{long} & \multirow{-4}{*}{Représente un entier} & 8 octets \\
+        \hline
+        \texttt{float} & Représente un nombre à virgule\\
+        %\texttt{double} & \multirow{-2}{*}{Représente un nombre à virgule} & 8 octets \\
+        \hline
+    \end{tabular}
+    \label{table-primitifs}
+\end{table}
+\type
+\end{frame}
+\defverbatim[colored]\reass{
+\begin{python}[caption = Réassignation de variables]
+a = 2
+print(a) #Affiche 2
+a = 1
+a = 4
+print(a) #Affiche 4
+a = "arbre" #Que se passe-t-il ?
+print(a) #Affiche "arbre"
+\end{python}
+}
+\begin{frame}
+\frametitle{Changer la valeur}
+\reass
+\end{frame}
+\defverbatim[colored]\oper{
+\begin{python}
+a = 4 + 6 #a vaut 10
+a = ((a + a)/2)+1 #a vaut 11
+b = a / 2 #b vaut 5
+c = a**2 + b #c vaut 11^2 + 5 = 121 + 5 = 126
+\end{python}
+}
+\begin{frame}
+\frametitle{Opérations}
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+         Opération & Description\\
+        \hline
+        + & Addition \\
+        \hline
+        - & Soustraction \\
+        \hline
+        * & Multiplication \\
+        \hline
+        / & Division  \\
+        \hline
+        **  & Puissance \\
+        \hline
+        \% & Modulo \\
+        \hline
+    \end{tabular}
+    \label{oper}
+\end{table}
+\oper
+\end{frame}
+\defverbatim[colored]\opera
+{\begin{python}
+x = 10
+x = x * 2
+y = x - 10
+z = y / x
+\end{python}
+}
+\begin{frame}
+\frametitle{A vous de jouer !}
+    \begin{block}{Mission 1}
+    Créer un code qui calcule et imprime successivement 
+    \begin{enumerate}
+    \item $a = 124^3 + 27^2 + 7^3$
+    \item $b = 2589 \% 60$
+    \item $c =\frac{a^2 - b^3}{a}$
+    \item $a+b+c$
+    \end{enumerate}
+    \end{block}
+    \begin{block}{Mission2}
+    Quelles sont les valeurs des différentes variables après l'exécution de
+        cette partie de code?
+        \opera
+    \end{block}
+\end{frame}
+\section{Strings}
+\defverbatim[colored]\strin{
+\begin{python}
+#Exemples de Strings
+v1 = "Ceci est une phrase"
+v2 = ""
+v3 = "3" #Est un String et non un int !
+v4 = "42.5"
+v5 = "qpdjnqpuifnsfvsnvsdv5s1vd1s5v15xv4s5d"
+print(type(v1))#Imprime str (String)
+print (v3/3) #Que se passe t il ?
+\end{python}
+}
+\begin{frame}
+\frametitle{Strings}
+Un String est le type qui représente un texte. Tout texte entouré de guillemets est considéré comme un \texttt{String}.
+\strin
+\end{frame}
+\defverbatim[colored]\access{
+\begin{python}
+# Accede a la lettre d'un String
+nom_du_string[numero_de_la_lettre]
+#Exemples
+my_string = "Bonjour"
+lettre_1 = my_string[0] #lettre_1 vaut 'B'
+lettre_4 = my_string[3] #lettre_4 vaut 'j'
+\end{python}
+}
+\begin{frame}
+\frametitle{Accès aux lettres d'un String}
+Chaque lettre du String est numérotée par ordre croissant (commençant par zéro). Ainsi le String "Hello" possède la lettre \textit{H} en \texttt{0}, la lettre \textit{e} en \texttt{1}, etc... On accède à une lettre d'un \texttt{String} de la manière suivante :
+\access
+\end{frame}
+\begin{frame}
+Voilà une liste d'opérations très utiles sur les Strings :
+\frametitle{Opérations sur les Strings}
+\begin{center}
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textbf{\emph{Opération}} & \textit{Description}\\
+\hline
+\bf len(nom\_string) & Calcule la longueur d'un String \\
+\hline
+\bf nom\_string.lower() & Retourne le String en minuscule\\
+\hline
+\bf nom\_string.upper() & Retourne le String en majuscule\\
+\hline
+\bf str(nom\_variable) & Cast en String\\
+\hline
+\bf nom\_string1+nom\_string2 & Retourne les 2 Strings concaténés\\
+\hline
+\end{tabularx}
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{A vous de jouer !}
+    \begin{block}{Mission 1}
+    Concaténer les \texttt{Strings} "Hakuna Matata", "Mais quelle ", "phrase magnifique !" et affichez le résultat en majuscules ainsi que sa longueur.
+    \end{block}
+    \begin{block}{Mission 2}
+    Caster les Strings a = "2" et b = "125.2" en nombre pour calculer a/b.\footnote{a et b doivent être impérativement définis en String au départ !} 
+    \end{block}
+\end{frame}
+\begin{frame}
+\frametitle{Interaction avec l'utilisateur}
+On peut demander à l'utilisateur de rentrer des informations avec la fonction \texttt{input()}. Par défaut, cette fonction convertit toutes les données entrées par l'utilisateur en \texttt{String} mais on peut imposer de recevoir un type en particulier en \textit{castant} la réponse de l'utilisateur dans le type désiré. 
+\end{frame}
+\defverbatim[colored]\input{
+\begin{python}
+answer = input("ce_qu_on_affiche_a_l_utilisateur")
+#Exemple
+nom = input("Quel est votre nom ?")
+prenom = input("Quel est votre prenom ?")
+age = int(input("Quel est votre age ?"))
+print("Bonjour " + nom + " " + prenom + " vous etes age de "
++ str(age) + " ans!")
+\end{python}
+}
+\begin{frame}
+\frametitle{Exemple}
+\input
+\end{frame}
+\begin{frame}
+\frametitle{A vous de jouez !}
+\begin{block}{Mission}
+    Faites un convertisseur qui demande à l'utilisateur un nombre en kilomètres et qui lui renvoie ce chiffre converti en miles en le remerciant d'avoir utilisé votre programme.
+\textit{Aide : 1 km = 0.621 mile}
+    \end{block}
+\end{frame}
+\section{Conditions}
+
+\begin{frame}
+\frametitle{Outils de comparaison}
+On peut comparer des variables entre elles. Le résultat de cette comparaison \textbf{est un booléen}.
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+         Opération & Description\\
+        \hline
+        $==$ & Egalité \\
+        \hline
+        $!=$ & Différent \\
+        \hline
+        $>$ & Plus grand \\
+        \hline
+        $>=$ & Plus grand ou égal \\
+        \hline
+        $<$ & Plus petit  \\
+        \hline
+        $<=$  & Plus petit ou égal \\
+        \hline
+    \end{tabular}
+    \label{operStr}
+\end{table}
+\end{frame}
+
+
+
+\defverbatim[colored]\compexemples{
+\begin{python}
+a = 5 > 4 # a vaut True
+b = 0.5 >= 1 # b vaut False
+c = 1 > "salut" # Que se passe t il ?
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Exemples}
+\compexemples
+\end{frame}
+
+\begin{frame}
+\frametitle{Opérateurs logiques}
+On construit des expression booléennes complexes en en combinant plusieurs grâce aux opérateurs logique.
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        a OU b & a or b\\
+        \hline
+        a ET b & a and b \\
+        \hline
+        NON a & not a \\
+        \hline
+    \end{tabular}\\
+    Priorité : \texttt{()}, \texttt{not}, \texttt{and}, \texttt{or}
+\end{table}
+\end{frame}
+
+\defverbatim[colored]\oplogex{
+\begin{python}
+a = True
+b = False
+c = a or b #c est vrai
+d = a and b #d est faux
+e = not b and a #e est vrai
+f = (not (a and b)) or (not ((not d) and (a or e)))
+#f vaut True
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Exemples}
+\oplogex
+\end{frame}
+
+\defverbatim[colored]\oplogmission{
+\begin{python}
+bool_one = False or not True and True
+bool_two = False and not True or True
+bool_three = True and not (False or False)
+bool_four = not not True or False or not True
+bool_five = False or not (True and True)
+\end{python}
+}
+
+\begin{frame}
+\frametitle{A vous de jouer !}
+    \begin{block}{Mission}
+    Evaluez les expressions booléennes suivantes.
+    \oplogmission
+    \end{block}
+\end{frame}
+
+\defverbatim[colored]\ifexempleuno{
+\begin{python}
+a = 10
+if a > 5:
+    print("Cette instruction est executee")
+print("fin du code")
+\end{python}
+}
+\defverbatim[colored]\ifexemplesecundo{
+\begin{python}
+a = 3
+if a > 5:
+    print("Cette instruction n'est pas executee")
+print("fin du code")
+# "fin du code" est toujours affiche
+# puisqu'il n'est pas dans la condition
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Le \texttt{if}}
+Permet d'exprimer une condition sous laquelle on va exécuter une partie du code. La condition doit être une expression booléenne. ATTENTION à ne pas oublier l'indentation.
+
+\ifexempleuno
+\ifexemplesecundo
+
+\end{frame}
+
+\defverbatim[colored]\elseexemple{
+\begin{python}
+a = 10
+if a < 5:
+    print("Cette instruction n'est pas executee")
+else:
+    print("Cette instruction est executee")
+print("fin du code")
+\end{python}
+}
+
+
+
+\begin{frame}
+\frametitle{Le \texttt{else}}
+Permet d'exprimer une alternative si la condition n'est pas vraie.
+
+\elseexemple
+
+\end{frame}
+
+\defverbatim[colored]\elifexemple{
+\begin{python}
+x = 200
+if x > 100:
+    print("A")
+elif x > 10:
+    print("B")
+else:
+    print("C")
+# Seul 'A' est imprime, pas 'B' (et forcement pas 'C')!!!
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Le \texttt{elif}}
+Enfin, on peut tester plusieurs conditions à la fois. Dès qu'une condition est vérifiée, les autres ne sont plus évaluées.
+
+\elifexemple
+
+\end{frame}
+
+\defverbatim[colored]\codemort{
+\begin{python}
+if False:
+    print("Ce code n'est jamais execute!")
+\end{python}
+}
+
+\defverbatim[colored]\codemortdeux{
+\begin{python}
+if a > 5 and a <= 5 :
+    print("Ce code n'est jamais execute!")
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Le code mort}
+
+Lorsque vous utilisez des conditions, faites attention à ne pas créer du \textit{code mort}, c'est-à-dire du code qui ne sera jamais exécuté.
+
+\codemort
+\codemortdeux
+
+\end{frame}
+
+\defverbatim[colored]\conditionscomplexes{
+\begin{python}
+x = int(input("Entrez un nombre"))
+if x >= 0:
+    print("Nombre positif")
+    if x > 1000000:
+        print("C'est un tres grand nombre!")
+else:
+    print("Nombre negatif")
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Conditions plus complexes...}
+On peut très bien combiner des conditions en les imbriquant les unes dans les autres.
+\conditionscomplexes
+\end{frame}
+
+\begin{frame}
+    \begin{block}{Mission}
+    \begin{itemize}
+        \item Définissez une variable \texttt{annee}, et imprimez "vrai" si l'année est bissextile. (\textbf{Aide :} une année est bissextile si elle est divisible par 4 et non divisible par 100, OU si elle est divisible par 400.)
+        \item Ecrivez un code qui demande à l'utilisateur d'entrer un chiffre et imprime "Félicitations, votre chiffre est un multiple de 7" si le chiffre est divisible par 7. Et "Désolé, votre chiffre n'est pas un multiple de 7" sinon.
+    \end{itemize}
+    \end{block}
+\end{frame}
+
+\section{Récapitulatif}
+
+\begin{frame}
+\frametitle{A vous de jouer!}
+\begin{block}{Mission}
+    Affichez à l'écran "Timon ou Pumbaa?"\\
+Le but du programme est de vérifier que l'utilisateur écrit "Timon", et il n'a que deux essais.\\
+Si le deuxième essai est faux, on affiche "Tu prends la porte".\\
+Si l'utilisateur écrit Timon en un ou deux essais, on affiche "Bon choix!"\\
+Attention, vous ne pouvez utiliser que des conditions!\\
+Commentaires obligatoires!
+\end{block}
+\end{frame}
+
+
+\section{Boucles}
+\begin{frame}
+\frametitle{La boucle}
+\textit{"Tant que cette condition est vraie, j'exécute le code suivant"}\\
+\end{frame}
+\defverbatim[colored]\while{
+\begin{python}
+"""Affiche tous les nombres de la table de 9 plus petits 
+que 100"""
+i = 0
+while i <= 100:
+	print("i vaut " + str(i))
+	i = i+9	# Mise a jour de i
+print("Fini")
+\end{python}
+}
+\begin{frame}
+\frametitle{Boucle while}
+\textbf{Ecriture } \texttt{while expr\_booleenne:}
+\begin{enumerate}
+\item On évalue l'expression booléenne
+\item Si l'expression est \textbf{False} : on ignore le code indenté qui suit le \textbf{while}.
+\item Si l'expression est \textbf{True} : on exécute le code indenté qui suit \textbf{while} et retour à l'étape 1.
+\while
+\end{enumerate} 
+\end{frame}
+\defverbatim[colored]\infini{
+\begin{python}
+i = 0
+while i < 10:
+    print("Je suis dans la boucle")
+print("Ce message ne s'affichera jamais")
+\end{python}
+}
+\begin{frame}
+\frametitle{Mise à jour}
+Attention à bien mettre à jour les variables dans l'expression booléenne ! Dans le cas contraire, on a une boucle qui ne s'arrête jamais : \textbf{une boucle infinie}. Elles peuvent littéralement tuer votre programme !
+\infini
+\end{frame}
+\begin{frame}
+\frametitle{Boucle for}
+Permet d'appliquer un code (\textit{indenté}) à chaque élément d'une structure de données\footnote{Par exemple un String ou une liste}. Elle commence toujours par le premier élément de la structure et finit par le dernier.\\
+\textbf{Ecriture} \texttt{for i in ma\_structure:}\\
+Ici \texttt{i} est appelé \textit{itérateur}, c'est-à-dire que c'est lui qui prendra successivement la première valeur de la structure de données, puis la seconde, et ainsi de suite.
+\end{frame}
+\defverbatim[colored]\forloop{
+\begin{python}
+#Utilise une boucle for pour imprimer un string
+s = "Hello World"
+for i in s:
+    print(i)
+print("done")
+\end{python}
+}
+\defverbatim[colored]\forloopsecundo{
+\begin{python}
+#Utilise une boucle for pour iterer les elements de 0 a 100
+for i in range(0,101):
+    print(i)
+print("done")
+\end{python}
+}
+\begin{frame}
+\frametitle{Exemples}
+\forloop
+\forloopsecundo
+\end{frame}
+\defverbatim[colored]\break{
+\begin{python}
+i = 0
+while(i<100):
+    if i != 50:
+        print(i)
+        i = i+1
+    else: 
+        break #On sort quand i == 50
+\end{python}
+}
+\begin{frame}
+\frametitle{Le break}
+Instruction pour sortir à tout moment d'une boucle. On la met à l'endroit où on souhaite en sortir.
+\break
+\textbf{Attention : } un \texttt{break} est considéré comme une sortie "sale" d'une boucle. On ne l'utilise donc que lorsque cela est absolument nécessaire !
+\end{frame}
+
+\begin{frame}
+\frametitle{A vous de jouer !}
+         \begin{block}{Mission 1}
+        Améliorez votre convertisseur pour qu'il convertisse les unités de l'utilisateur jusqu'à ce que celui entre le mot "stop".  
+        \end{block}
+         \begin{block}{Mission 2} 
+        Implémentez un programme qui prend un texte en entrée (fourni par l'utilisateur) et imprime chaque voyelle du texte. (Essayez avec un texte très long trouvé sur Internet...)
+        \end{block}
+         \begin{block}{Mission 3} Implémentez un programme qui prend un texte en entrée (fourni par l'utilisateur) et qui imprime \textbf{True} si le texte contient un palindrome et \textbf{False} sinon. (\textbf{Aide :} un palindrome est un mot qui peut se lire dans les 2 sens. \textit{Exemple} : kayak, abcba, ...)  \end{block}
+\end{frame}
+
+
+\section{Listes}
+
+\defverbatim[colored]\listCreation{
+\begin{python}
+jeuxVideos = ['HeartStone', 'LoL', 'WoW', 'ClubPenguin']
+chiffres = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+bazar = ['Coucou', 42, 'petite', 0.02, 'perruche', True]
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Créer une liste}
+Une liste est un ensemble d'objets. On peut y stocker des variables de n'importe quel type.
+\vspace{1cm}
+\listCreation
+\end{frame}
+
+\defverbatim[colored]\listAccess{
+\begin{python}
+bazar = ['Coucou', 42, 'petite', 0.02, 'perruche', True]
+print(bazar[0])   # Imprime "Coucou"
+print(bazar[5])   # Imprime "True"
+print(bazar[2:4]) # Imprime "['petite', 0.02]"
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Accès dans une liste}
+L'accès aux éléments d'une liste est similaire à l'accès aux lettres d'un String (= cas particulier de liste!).
+\vspace{1cm}
+\listAccess
+\end{frame}
+
+\defverbatim[colored]\listModif{
+\begin{python}
+my_list = ['a', 'b', 'c', 'd', 'e']
+#Modification
+my_list[3] = 'f'    #['a', 'b', 'c', 'f', 'e']
+#Suppression
+del my_list[3]      #['a', 'b', 'c', 'e']
+my_list.remove('e') #['a', 'b', 'c']
+#Ajout
+my_list.append('d') #['a', 'b', 'c', 'd']
+my_list + ['e']     #['a', 'b', 'c', 'd', 'e']
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Modification de listes}
+En python, une liste n'est pas immuable : on peut changer/supprimer/ajouter un ou plusieurs éléments.
+\vspace{0.5cm}
+\listModif
+\end{frame}
+
+\defverbatim[colored]\listOp{
+\begin{python}
+my_list = ['a', 'b', 'c', 'd', 'e']
+#Longueur de la liste
+longueur = len(my_list)  #longueur vaut 5
+#Presence d un element
+'d' in my_list #vaut True 
+'f' in my_list #vaut False
+#Parcourir une liste
+for x in my_list : print (x) #imprime abcde
+#Retourner une liste
+my_list.reverse() #my_list vaut ['e', 'd', 'c', 'b', 'a']
+#Mettre une liste dans l ordre croissant
+my_list.sort() #my_list vaut ['a', 'b', 'c', 'd', 'e']
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Opérations sur les listes}
+Voici quelques opérations communes et pratiques sur les listes.
+\vspace{0.5cm}
+\listOp
+\end{frame}
+
+\begin{frame}
+\frametitle{A vous de jouer !}
+    \begin{enumerate}
+        \item \begin{block}{Mission 1}
+        Créez une liste de Strings contenant au moins 5 fruits et légumes, puis triez la dans l'ordre alphabétique.
+        \end{block}
+        \item \begin{block}{Mission 2}
+        Ajoutez à votre liste les éléments suivants \textbf{s'ils ne sont pas déjà présents} :
+        ['banane', 'tomate', 'rutabaga', 'reine-claude', 'patate']
+        \end{block}
+        \item \begin{block}{Mission 3}
+        Éliminez de votre liste tous les éléments dont la première lettre commence par la lettre \textbf{p}.
+        \end{block}
+    \end{enumerate}
+\end{frame}
+
+\section{IO}
+
+\begin{frame}
+\frametitle{Ouverture d'un fichier}
+Pour manipuler un fichier, il faut toujours commencer par l'ouvrir ! \\
+Ouverture avec la fonction \texttt{open(nom\_du\_fichier, Permissions)}. Où nom\_du\_fichier est simplement le nom du fichier\footnote{Le fichier doit exister et se trouver dans le répertoire de anaconda !} que l'ont veut ouvrir et Permissions décide de ce qu'on peut en faire.
+\\
+\textbf{Permissions : }
+\begin{itemize}
+\item "r" pour lecture
+\item "w" pour écriture
+\item "r+" pour lecture et écriture
+\end{itemize}
+\end{frame}
+\defverbatim[colored]\writing{
+\begin{python}
+f = open("my_file.txt", "w")
+f.write("J'ecris dans mon fichier")
+f.write("\n") #Retour a la ligne
+f.write("C'est super genial")
+f.write("\n")
+f.write("mdr")
+f.close()
+\end{python}
+}
+\begin{frame}
+\frametitle{Ecriture dans un fichier}
+On \textbf{ouvre} d'abord le fichier dans lequel on souhaite écrire avec la permission d'écriture. Et on stocke la valeur de retour de la fonction \texttt{open} dans une variable \footnote{Le terme exact est \textit{descripteur de fichier}}. \\
+Ecriture avec la fonction \texttt{write()} :  variable\_de\_fichier.\texttt{write("String\_de\_ce\_qu\_on\_veut\_ecrire")}
+\writing
+\end{frame}
+\defverbatim[colored]\reading{
+\begin{python}
+f = open("my_file.txt", "r")
+text = f.read()
+print(text) #Imprime le contenu du fichier
+f.close()
+\end{python}
+}
+\defverbatim[colored]\readingsecundo{
+\begin{python}
+f = open("my_file.txt", "r")
+for line in f:
+    print(line) #Imprime toutes les lignes du fichier
+f.close()
+\end{python}
+}
+\begin{frame}
+\frametitle{Lecture dans un fichier}
+On \textbf{ouvre} d'abord le fichier dans lequel on souhaite lire avec la permission de lecture. Et on stocke la valeur de retour de la fonction \texttt{open} dans une variable. \\
+Lecture avec la fonction \texttt{read()} :  variable\_de\_fichier.\texttt{read()} ou avec une boucle \textbf{for}.
+\reading
+\readingsecundo
+\end{frame}
+\begin{frame}
+\frametitle{Fermeture d'un fichier}
+Une fois qu'on a fini de manipuler un fichier, on le ferme. C'est primordial ! \\
+Sinon on a une grande chance de générer une bonne grosse ribambelle d'erreurs.\\
+Fermeture avec la fonction \texttt{close()} variable\_de\_fichier.\texttt{close()}
+\end{frame}
+
+\begin{frame}
+\frametitle{A vous de jouer !}
+        \begin{block}{Mission 0} %TODO
+        Ecrivez votre prénom dans un fichier, EN UTILISANT PYTHON. Puis lisez le fichier, récupérez le prénom, et affichez "Bonjour [prénom]" dans la console.
+        \end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{A vous de jouer !}
+    \begin{enumerate}
+        \item \begin{block}{Mission 1} %TODO
+        Réalisez une mini-base de donnée. Votre programme doit demander à l'utilisateur son nom, prénom, année de naissance, sexe, poids, viande préférée et carte préférée de hearthstone et retranscrire toutes ses informations dans le fichier "client1.txt" et ainsi de suite pour les autres clients.  
+        \end{block}
+        \item \begin{block}{Mission 2} 
+        Réalisez un programme pour aller recherche les informations de la mini base de donnée. Ce dernier demande à l'utilisateur de quel client il veut les information et lui imprime toutes les informations concernant ce client.
+        \end{block}
+    \end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{A vous de jouer !}
+\begin{block}{Mission 3} Améliorez votre base de donnée pour qu'elle stocke implicitement (donc sans rien demander au client) l'espérance de vie du client et son âge.\\
+        L'espérance de vie d'un homme est de 72 ans et d'une femme de 80 ans.   \end{block}
+\end{frame}
+\section{Fonctions}
+% + portée des variables
+
+\begin{frame}
+\frametitle{Quand l'utiliser?}
+Que faire si on a du code qui se répète régulièrement? Le copier-coller n'est pas considéré comme une bonne pratique, on préfère utiliser des \textbf{fonctions}, qui encapsulent une portion de code.
+
+On essaye de rendre la fonction la plus générale possible, avec des \textbf{arguments}, des variables spéciales auxquelles la fonction a accès.
+\end{frame}
+
+\defverbatim[colored]\functionexemple{
+\begin{python}
+# definition de la fonction
+def tableDeMultiplication(numeroDeLaTable):
+    i = 1
+    while i <= 10:
+        print(i*numeroDeLaTable)
+        i += 1
+    
+# imprime la table de 4
+tabledeMultiplication(4)
+
+#imprime la table de 9, sans copier-coller!
+tableDeMultiplication(9)
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Exemple : tables de multiplication}
+\functionexemple
+\end{frame}
+
+\defverbatim[colored]\deffunction{
+\begin{python}
+# Definition de la fonction
+def nomDeLaFonction(argument1, argument2, ...):
+    # corps de la fonction
+    
+# Appel de la fonction
+nomDeLaFonction(arg1, arg2, ...)
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Définition générale}
+\deffunction
+\end{frame}
+
+\defverbatim[colored]\defreturn{
+\begin{python}
+def aireTriangle(largeur, hauteur):
+    aire = largeur*hauteur
+    return aire
+    # ou plus rapide : return largeur*hauteur
+
+print("L'aire est de " + str(aireTriangle(4, 9)))
+\end{python}
+}
+
+
+\begin{frame}
+\frametitle{Valeurs de retour}
+Jusqu'à présent, l'exemple donné montre une fonction qui travaille de manière "interne", elle ne renvoie aucune valeur. Mais c'est justement un des grands intérêts des fonctions!
+
+\defreturn
+
+Cet exemple montre une fonction qui calcule l'aire d'un rectangle, et l'utilisation de la valeur de retour.
+\end{frame}
+
+\begin{frame}
+\frametitle{A vous de jouer !}
+\begin{block}{Missions}
+    \begin{enumerate}
+        \item
+            Créez les fonctions \texttt{soustraction(arg1, arg2)}, \texttt{multiplication(arg1, arg2)}, \texttt{division(arg1, arg2)}, et \texttt{power5(arg)} qui, comme leurs noms l'indique font respectivement les opérations de soustraction, multiplication, division, mise à la puissance de 5.
+        \item
+            Créez la fonction \lstinline{stringLength(myString)} qui affiche la longueur du texte en argument.
+    \end{enumerate}
+    \end{block}
+\end{frame}
+
+\defverbatim[colored]\porteeexemple{
+\begin{python}
+x = 10
+
+def fonction():
+    x = 20
+    print(x)
+
+fonction() # Imprime 20
+print(x) # Imprime 10
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Portée des variables}
+Les variables sont déclarées dans leur "bloc". Une variable déclarée dans une fonction est distincte des autres variables déclarées en dehors du corps de la fonction, et n'est plus accessible quand la fonction se termine.
+\porteeexemple
+\end{frame}
+
+\defverbatim[colored]\variablesglobales{
+\begin{python}
+x = 10
+print(x) # Imprime 10
+
+def fonction():
+    global x
+    x += 10
+    print(x)
+
+fonction() # Imprime 20
+fonction() # Imprime 30
+print(x) # Imprime 30
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Variables globales}
+On peut aussi utiliser utiliser le mot-clef \texttt{global} pour élargir la portée d'une variable, et la rendre globale.
+
+\variablesglobales
+
+Dans ce cas, Python trouve \texttt{x} déclaré à un niveau supérieur, et la fonction y a pleinement accès et peut la modifier.
+\end{frame}
+
+\section{Objets}
+
+\begin{frame}
+\frametitle{Programmation orientée objet (POO)}
+    La POO permet de définir ses propres types de données, sous forme d'objets.
+    Chaque objet possède des variables (= d'autres objets) ainsi que des fonctions qui lui sont propres.
+    Les variables sont appelées \textit{attributs}, et les fonctions sont les \textit{méthodes} de l'objet.
+    
+    \vspace{1cm}
+    
+    Par exemple, un objet String peut être défini comme suit :
+    \begin{itemize}
+        \item \textbf{attributs} : liste de caractères, longueur de la liste
+        \item \textbf{méthodes} : \texttt{lower()}, \texttt{upper()}, ...
+    \end{itemize}
+\end{frame}
+
+
+\defverbatim[colored]\classeEx{
+\begin{python}
+class Animal:
+    #Attributs
+    #Valeurs par defaut
+    nombrePattes = 4
+    
+    #Constructeur
+    #Permet de creer un objet animal avec un certain nom
+    def __init__(self, nom):
+        self.nom = nom
+    
+    #Modificateur
+    #casse une patte a l'animal
+    def patte_cassee(self, couleur):
+        self.nombrePattes -= 1
+\end{python}
+}
+
+\begin{frame}
+\frametitle{Classes et Objets}
+    Il est important de bien faire la distinction entre une classe et un objet de cette classe.
+    \begin{itemize}
+        \item Une classe est une définition d’un concept. On peut la voir comme le mode de fabrication et d'utilisation d'un objet. 
+        \item Un objet est une instance d’une classe. Il s'agit d'un élément concret dont le comportement est défini par la
+        classe.
+    \end{itemize}
+    
+    Comme un objet effectue des opérations sur lui-même, il est important de pouvoir le référencer dans le code de la classe.
+    On utilise pour ça le mot clef \texttt{self}.
+\end{frame}
+
+\begin{frame}
+\frametitle{Exemple de classe}
+    \classeEx
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SÉPARATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% \section{Introduction}
+
+% \begin{frame}
+% \frametitle{Déroulement de la semaine}
+%     \begin{itemize}
+%         \item Prise de contact
+%         \item Initiation à Python
+%         \item Découverte Raspberry Pi
+%         \item Projet 1 : jeu Raspberry Pi
+%         \item Projet 2 : station météo
+%         \item Présentation %TODO retirer?
+%     \end{itemize}
+% \end{frame}
+
+% \section{Organisation}
+
+% \begin{frame}
+% \frametitle{Travail}
+%     \textbf{Travail en groupe}
+%     \begin{itemize}
+%         \item 2 ou 3 personnes
+%         \item Collaboration/entraide très importante en informatique!
+%         \item Plus on est de fous, plus on rit!
+%     \end{itemize}
+    
+%     \textbf{En pratique}
+%     \begin{itemize}
+%         \item Explication de la théorie avec slides
+%         \item Petits exercices pour s'entraîner
+%         \item Différents niveaux en fonction de votre avancement
+%         \item Corrections et réponses aux questions
+%         \item Réalisation de projets
+%     \end{itemize}
+% \end{frame}
+
+% \begin{frame}
+% \frametitle{Planning} %TODO
+%     \begin{table}
+%     \resizebox{\columnwidth}{!}{%
+%     \begin{tabular}{l|c|c|c|c|c|}
+%      & \textbf{Lundi} & \textbf{Mardi} & \textbf{Mercredi} & \textbf{Jeudi} & \textbf{Vendredi}\\
+%      \hline
+%     \textit{9h-10h30}    & Introduction   & Python     & Raspi Game?& TODO       & TODO \\ 
+%     \hline 
+%     \textit{10h30-10h50} & PAUSE          & PAUSE      & PAUSE      & PAUSE      & PAUSE \\ 
+%     \hline 
+%     \textit{10h50-12h}   & Python         & Python     & TODO       & TODO       & TODO \\ 
+%     \hline 
+%     \textit{12h-13h}     & PAUSE MIDI     & PAUSE MIDI & PAUSE MIDI & PAUSE MIDI & PAUSE MIDI \\ 
+%     \hline 
+%     \textit{13h-14h30}   & Python         & RasPi?     & TODO       & TODO       & Présentation \\ 
+%     \hline 
+%     \textit{14h30-14h50} & PAUSE          & PAUSE      & PAUSE      & PAUSE      & Présentation \\ 
+%     \hline 
+%     \textit{14h50-16h}   & Intro RasPi    & TODO       & TODO       & TODO       & Présentation \\ 
+%     \hline
+%     \end{tabular}
+%     }
+%     \end{table}
+% \end{frame}
+    
+% \begin{frame}
+% \frametitle{Matière} %TODO
+%     \begin{table}
+%     \resizebox{\columnwidth}{!}{%
+%     \begin{tabular}{|L{3cm}|L{3cm}|L{3cm}|L{3cm}|L{3cm}|}
+%     \textbf{Lundi} & \textbf{Mardi} & \textbf{Mercredi} & \textbf{Jeudi} & \textbf{Vendredi}\\
+%     \hline
+%     \underline{Python} \newline Variables, Tableaux, Conditions, Boucles \newline \newline \underline{Raspberry Pi} \newline Introduction et règles & \underline{Python} \newline Fonctions, Ex. Récapitulatifs \newline \underline{Raspberry Pi} \newline Fonctionnement \newline \underline{IA} \newline Introduction & \underline{IA} \newline Méthodes  \newline Modules & Modules & Modules
+%     \end{tabular}
+%     }
+%     \end{table}
+% \end{frame}
+
+% \section{Présentation}
+
+% \begin{frame}
+%     \frametitle{Présentation}
+%     \begin{itemize}
+%     \item Prénom et nom
+%     \item Âge et année d'étude
+%     \item Déjà fait de la programmation? En Python?
+%     \item Connaissance de Raspberry Pi?
+%     \item Attentes envers ce stage
+%     \end{itemize}
+% \end{frame}
+
+
+% \begin{frame}
+% \frametitle{SÉPARATION}
+% \begin{block}{Définition Wikipédia \textit{Intelligence Artificielle}}
+% L'intelligence artificielle est la "recherche de moyens susceptibles de doter les systèmes informatiques de capacités intellectuelles comparables à celles des êtres humains".\\
+% \end{block}
+% \begin{itemize}
+% \item Capacité d'une machine à "réfléchir"
+% \item Une machine qui exécute des tâches répétitives, pré-programmées peut sembler intelligentes sans pour autant être dotée d'une IA
+% \end{itemize}
+% \end{frame}
+
+\end{document}

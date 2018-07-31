@@ -1,0 +1,32 @@
+Une fonction est un outil informatique qui encapsule une portion de code (une séquence d'instructions) et qui effectue une tâche bien spécifique (calcul, avertissement, affichage, ...).
+
+L'utilisation d'une fonction se nomme \textit{appel d'une fonction}. Chaque appel de fonction contient des \textbf{arguments} qui sont les informations avec laquelle la fonction va travailler.
+
+ Ce concept n'est pas nouveau, vous connaissez déjà plein de fonctions! Par exemple, la fonction \texttt{print()} qui prend en argument un \texttt{str} et l'imprime dans la console. \\
+ 
+ Une fonction peut renvoyer une valeur, résultat de son exécution. Cette valeur s'appelle \textbf{la valeur de retour}. Autre exemple, la fonction \texttt{input} qui prend en argument un \texttt{str} (qui est la question posée à l'utilisateur) et retourne un \texttt{str} (qui est la réponse de l'utilisateur).\\
+ 
+ \subsection{Créer ses propres fonctions}
+ Utiliser des fonctions toutes faites c'est bien. En créer soi-même, c'est mieux ! 
+ En \textsc{Python}, la création de fonction se fait par le code \texttt{def nom\_de\_la\_fonction(argument1, argument2, ...):}. Le code indenté qui suit cette instruction est le \textit{corps} de la fonction et correspond aux instructions que celle-ci exécutera à chaque appel. Pour renvoyer une valeur, on utilise le mot clé \texttt{return} suivi de la valeur qu'on souhaite renvoyer. Enfin, pour appeler une fonction, on utilise le nom de la fonction suivi des arguments qu'on veut lui passer entre parenthèses.
+ 
+\begin{python}[caption = Exemple 1 : La fonction addition]
+def addition(arg1, arg2): #Definition de la fonction addition
+	return arg1+arg2
+print(addition(3,4)) #Affiche 7
+\end{python}
+\begin{python}[caption = Exemple 2 : La fonction reverse]
+def reverse(my_string): #Definition de la fonction qui inverse un String
+	toReturn = ""
+	for i in my_string:
+		toReturn = i + toReturn
+	return toReturn
+print(reverse("esarhp eugnol zessa enU")) #Affiche Une assez longue phrase 
+\end{python}
+
+ \subsection{Exercices :}
+ \begin{enumerate}
+ \item Créez les fonctions \texttt{soustraction(arg1, arg2)}, \texttt{multiplication(arg1, arg2)}, \texttt{division(arg1, arg2)}, et \texttt{power5(arg)} qui, comme leurs noms l'indique font respectivement les opérations de soustraction, multiplication, division, mise à la puissance de 5. 
+ \item Créez la fonction \lstinline{string_length(my_string)} qui affiche la longueur du texte en argument.
+ %\item Implémentez le jeu du touché-coulé. (En cours)
+ \end{enumerate}
