@@ -6,8 +6,7 @@
 \usepackage[table]{xcolor}
 \usepackage{pdfpages}
 \title{Syllabus : Python et Raspberry Pi}
-\author{Florence Blondiaux\
-       Jean-Martin Vlaeminck}
+\author{Florence Blondiaux\and Jean-Martin Vlaeminck}
 \date{06 août - 10 août 2018}
 
 \usepackage{natbib}
@@ -50,7 +49,8 @@
 
 \renewcommand{\familydefault}{\sfdefault}
 
-
+\hyphenation{Python}
+\hyphenation{PYTHON}
 
 
 
@@ -74,7 +74,7 @@ Durant ce stage, nous allons aborder les points suivant :
 	\begin{enumerate}
 		\item Nous allons étudier le langage de programmation \textbf{PYTHON}. Ce langage va permettre aux étudiants d'interagir avec le raspberry pi et sera utile pour atteindre les objectifs fixés par le stage. Nous reprendrons les bases puis nous approfondirons la matière progressivement. De nombreux exercices accompagneront l'élève durant cet apprentissage.\\
 		
-		\item Nous découvrirons également comment intéragir avec le \textbf{raspberry pi}. Nous verrons les bases de linux, le coeur du système d'exploitation du raspberry. 
+		\item Nous découvrirons également comment interagir avec le \textbf{Raspberry Pi}. Nous verrons les bases de Linux, le c\oe{}ur du système d'exploitation du Raspberry Pi.
 		
 		% \item En fin de semaine nous réaliserons une petite \textit{station météo} ou un \textit{jeu video} sur le raspberry pi.
 	\end{enumerate}
@@ -87,7 +87,7 @@ Durant ce stage, nous allons aborder les points suivant :
 \end{minipage}
 
 \bigskip
-Vous disposez chacun d'un raspberry pi permettant de résoudre les exercices proposés. Cependant n'hésitez pas à dialoguer avec vos voisins concernant votre solution. En informatique, nous appelons cette
+Vous disposez chacun d'un Raspberry Pi permettant de résoudre les exercices proposés. Cependant n'hésitez pas à dialoguer avec vos voisins concernant votre solution. En informatique, nous appelons cette
 technique le \textbf{pair programming}. Une telle méthode de travail
 permet à la fois de rendre l'apprentissage plus agréable et plus
 efficace.
@@ -107,7 +107,7 @@ Ce plan est donné à titre informatif, il pourra être modifié selon les circo
 		\hline
 		\rowcolor[HTML]{CA4242} 
 		{\color[HTML]{000000} Lundi}                                                           & {\color[HTML]{000000} Mardi}                                       & {\color[HTML]{000000} Mercredi}                                           & {\color[HTML]{000000} Jeudi}                                   & {\color[HTML]{000000} Vendredi} \\ \hline
-		\begin{tabular}[c]{@{}l@{}}Introduction au\\ Raspberry,\\ Premier \\programme\end{tabular} & \begin{tabular}[c]{@{}l@{}}Python\\ Types\\ Fonctions\end{tabular} & \begin{tabular}[c]{@{}l@{}}Python \\ Conditions\\ Boucles\end{tabular} & \begin{tabular}[c]{@{}l@{}}Coder un \\jeu: PyGame\end{tabular} & Station Météo %TODO                
+		\begin{tabular}[c]{@{}l@{}}Introduction au\\ Raspberry,\\ Premier \\programme\end{tabular} & \begin{tabular}[c]{@{}l@{}}Python\\ Types\\ Fonctions\end{tabular} & \begin{tabular}[c]{@{}l@{}}Python \\ Conditions\\ Boucles\end{tabular} & \begin{tabular}[c]{@{}l@{}}Coder un jeu\\ avec PyGame\end{tabular} & Station Météo %TODO                
 		   \\ \hline
 	\end{tabular}
 \end{table}
@@ -234,27 +234,27 @@ Maintenant que vous savez écrire un programme ainsi que l'exécuter et que vous
 
 
 
-%
-%\chapter{Raspberry Pi}
-%
-%\section{Présentation}
-%\input{91_presentation}
-%
-%\section{Mise en place}
-%\input{92_mise_en_place}
-%
-%\section{Installation de l'OS}
-%\input{93_installation_os}
-%
-%\section{Terminal}
-%\input{95_terminal}
-%
-%\section{Accéder au Raspberry Pi}
-%\input{97_acces}
-%
+
+\chapter{Raspberry Pi}
+
+\section{Présentation}
+\input{91_presentation}
+
+\section{Mise en place}
+\input{92_mise_en_place}
+
+\section{Installation de l'OS}
+\input{93_installation_os}
+
+\section{Terminal}
+\input{95_terminal}
+
+\section{Accéder au Raspberry Pi}
+\input{97_acces}
+
 %\section{Mettre à jour son Raspberry Pi}
 %\input{94_mise_a_jour}
-%
+
 %\section{Installer Python 3}
 %Par défaut, le Raspberry Pi n'est plus livré avec Python 3. Heureusement, c'est facile à installer! Tapez successivement les lignes suivantes dans le terminal :\\
 %\begin{lstlistings}
@@ -272,6 +272,23 @@ Maintenant que vous savez écrire un programme ainsi que l'exécuter et que vous
 %\section{Capteur d'humidité et de température}
 %\input{98_capteur}
 %
+\section{Mini-jeu: Snake!}
+
+Pour vous permettre de pratiquer votre talent en programmation, nous vous proposons de créer un petit jeu vidéo, le célèbre Snake.
+
+Vous ne connaissez pas Snake ? Il s'agit d'un jeu vidéo, popularisé par Nokia, qui consiste à guider au clavier un serpent pour lui donner à manger des pommes apparaissant sur le plateau de jeu. Malheureusement pour lui, plus il mange plus il grandit, et il lui est défendu de se mordre lui-même (c-à-d de marcher sur son corps).
+
+Pour cela, nous allons utiliser une bibliothèque logiciel (un module) nommé Pygame, qui permet de développer rapidement des jeux vidéos en Python. Cette bibliothèque permet notamment d'avoir une interface graphique pour votre jeu avec un minimum d'efforts.
+
+Dans le cadre de cette semaine, vous n'aurez pas l'occasion de coder l'ensemble du jeu; c'est bien trop long (et parfois pas très évident). A la place, nous vous proposons de compléter une partie des fonctions utilisées par ce jeu, et de partir du code existant pour l'améliorer et, qui sait, en faire le prochain jeu à succès de la planète :-) !
+
+\section{Utilisation du Raspberry Pi: un radar coloré!}
+
+Maintenant que vous savez utiliser Python ainsi que le Raspberry Pi, nous vous proposons d'utiliser certaines des fonctionnalités du Raspberry qui le rendent populaire.
+
+Avez-vous remarqué la rangée de petits pics métalliques sur le côté de celui-ci ? Il s'agit de connecteurs nommés GPIO (general purpose input/output) qui permettent de connecter toutes sortes de choses au Raspberry Pi: des capteurs, des afficheurs, des DEL \dots.
+
+Nous vous proposons de réaliser un radar détectant les objets s'en approchant en utilisant les différents éléments mis à votre disposition. Attention: suivez bien les instructions données pour éviter d'endommager votre Raspberry.
 
 \chapter{Conclusion}
 
