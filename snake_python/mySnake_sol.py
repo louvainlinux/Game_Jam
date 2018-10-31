@@ -1,5 +1,4 @@
 """
-Created on Thu Jul 12 11:46:10 2018 
 @author: Quentin
 """
 from pygame.locals import *
@@ -38,16 +37,16 @@ def movePlayer(player, keys):
         player.moveDown()
 
 def moveOtherPlayer(player, keys):
-    if (keys[K_D]):
+    if (keys[K_d]):
         player.moveRight()
 
-    if (keys[K_Q]):
+    if (keys[K_q]):
         player.moveLeft()
 
-    if (keys[K_Z]):
+    if (keys[K_z]):
         player.moveUp()
 
-    if (keys[K_S]):
+    if (keys[K_s]):
         player.moveDown()
 
 def snakeSpeed(length):

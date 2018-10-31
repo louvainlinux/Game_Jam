@@ -1,5 +1,7 @@
+# To use mySnake.py instead of the solution code, replace "mySnake_sol" by "mySnake" in the following line.
 from mySnake_sol import *
 from sys import exit
+import pygame
 
 class Apple:
     x = 0
@@ -76,7 +78,7 @@ class Player:
         for i in range(0,self.length):
             surface.blit(image,(self.x[i],self.y[i]))
 
-    def isCollision(apple):
+    def myCollision(self, apple):
         if isCollision(apple.x,apple.y,self.x[0], self.y[0]):
             self.length = self.length + 1
             x = randint(0,19) * self.step
@@ -86,16 +88,16 @@ class Player:
                 y = randint(0,14) * self.step
 
 
-        apple.x = x
-        apple.y = y
+            apple.x = x
+            apple.y = y
 
-    def selfCollision():
+    def selfCollision(self):
         for i in range(2,self.length):
             if isCollision(self.x[0],self.y[0],self.x[i], self.y[i]):
                 return True
         return False
 
-    def wallCollision(width, height):
+    def myWallCollision(self, width, height):
         if (wallCollision(self.x[0], self.y[0], width, height)):
             return True
 
@@ -117,7 +119,7 @@ class App:
         self.gameOverPlayer = False
         self.gameOverOtherPlayer = False
         self.player = Player(3, 0, 0)
-        self.other_player = Player(3, 1, 1)
+        self.other_player = Player(3, 0, self.windowHeight-50)
         self.apple = Apple(5,5)
         self.window = None
         self.button = None
@@ -140,16 +142,16 @@ class App:
         self.other_player.update()
 
         # does snake eat apple?
-        self.other_player.isCollision(self.apple)
-        self.player.isCollision(self.apple)
+        self.other_player.myCollision(self.apple)
+        self.player.myCollision(self.apple)
 
         # does snake collide with itself?
         self.gameOverPlayer = self.other_player.selfCollision()
         self.gameOverOtherPlayer = self.other_player.selfCollision()
 
         # does snake collide with wall?
-        salf.gameOverPlayer = self.player.wallCollision(self.windowWidth, self.windowHeight)
-        self.gameOverOtherPlayer = self.other_player.wallCollision(self.apple)
+        self.gameOverPlayer = self.player.myWallCollision(self.windowWidth, self.windowHeight)
+        self.gameOverOtherPlayer = self.other_player.myWallCollision(self.windowWidth, self.windowHeight)
 
         pass
 

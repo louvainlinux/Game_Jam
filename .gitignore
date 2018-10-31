@@ -12,6 +12,9 @@
 *.cb2
 .*.lb
 
+## Compiled Python files
+*.pyc
+
 ## Intermediate documents:
 *.dvi
 *.xdv
