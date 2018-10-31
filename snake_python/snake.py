@@ -1,3 +1,4 @@
+# To use mySnake.py instead of the solution code, replace "mySnake_sol" by "mySnake" in the following line.
 from mySnake_sol import *
 from sys import exit
 import pygame
