@@ -1,0 +1,32 @@
+Les variables sont déclarées dans leur "bloc". Une variable déclarée dans une fonction est distincte des autres variables déclarées en dehors du corps de la fonction, et n'est plus accessible quand la fonction se termine. On appelle ce concept la \textbf{portée des variables}.
+
+Dans l'exemple ci-dessous, on déclare deux variables appelées \texttt{x}, \textbf{mais ce ne sont pas les mêmes!} On s'en rend compte en exécutant le code : le \texttt{x} déclaré hors de la fonction n'est pas modifié après l'appel de la fonction.
+
+\begin{python}
+x = 10
+
+def fonction():
+    x = 20
+    print(x)
+
+fonction() # Imprime 20
+print(x) # Imprime 10
+\end{python}
+
+On peut aussi utiliser utiliser le mot-clef \texttt{global} pour élargir la portée d'une variable, et la rendre globale. Ainsi, dans l'exemple suivant, quand Python rencontre le mot-clef \texttt{global} dans la fonction, il va regarder non seulement si \texttt{x} a été déclaré dans la fonction, mais aussi dans les "blocs" supérieurs. Dans ce cas, il trouve \texttt{x} déclaré à un niveau supérieur, et la fonction y a pleinement accès et peut la modifier.
+
+\begin{python}
+x = 10
+print(x) # Imprime 10
+
+def fonction():
+    global x
+    x += 10
+    print(x)
+
+fonction() # Imprime 20
+fonction() # Imprime 30
+print(x) # Imprime 30
+\end{python}
+
+Les variables globales paraissent pratiques : on la déclare une fois, et on peut l'utiliser partout. Cependant, dans un grand programme, elles deviennent bien vite une source de confusion, et ce n'est pas considéré comme une bonne pratique. On vous conseille donc de les utiliser avec modération.

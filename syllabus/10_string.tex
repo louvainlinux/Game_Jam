@@ -1,0 +1,77 @@
+Maintenant que nous connaissons les types natifs, on peut aller un peu plus loin. Il y a quelque chose de très important à retenir : \textbf{En Python, tout est objet!} Mêmes les types de données natifs qu'on a vu précédemment sont des objets. Nous apprendrons plus tard à définir nos propres types de données, c'est-à-dire des \textbf{objets} qui ont été déclarés dans des \textbf{classes}. Dans cette section on va s'attarder sur un type de données qu'on a déjà rencontré : le \texttt{String} (ce qui veut dire \textit{chaîne} en anglais).
+
+Un String est le type qui représente un texte. Tout texte entouré de guillemets est considéré comme un \texttt{String}.
+
+\begin{python}[caption = type \texttt{String}]
+#Exemples de Strings
+v1 = "Ceci est une phrase"
+v2 = ""
+v3 = "3" #Est un String et non un int car il y a des guillemets!
+v4 = "42.5"
+v5 = "qpdjnqpuifnsfvsnvsdv5s1vd1s5v15xv4s5d"
+print(type(v1)) #Imprime str (ce qui correspond a String)
+\end{python}
+
+\subsection{Opérations sur les \texttt{String}}
+Chaque lettre du String est numérotée de par ordre croissant (commençant par zéro). Ainsi le String "Hello" possède la lettre \textit{H} en \texttt{0}, la lettre \textit{e} en \texttt{1}, etc... On accède à une lettre d'un \texttt{String} de la manière suivante :
+
+\begin{python}[caption = Accès à String]
+nom_du_string[numero_de_la_lettre] # Accede a la lettre d'un String
+#Exemples
+my_string = "Bonjour"
+lettre_1 = my_string[0] #lettre_1 vaut 'B'
+lettre_4 = my_string[3] #lettre_4 vaut 'j'
+\end{python}
+
+Attention à ne pas oublier que les numéros des lettres commencent à 0 et non à 1! C'est une faute très courante au début!
+
+Des opérations courantes sur les \texttt{String} sont présentées dans le tableau ci-dessous.
+
+Notez la syntaxe particulière des instructions lower et upper : le nom de la variable, suivi d'un point, suivi du nom de l'opération. Pour l'instant, utilisez-les telles quelles, on en reparlera dans le chapitre sur les classes et objets.
+
+\begin{center}
+\begin{tabularx}{\textwidth}{|>{\columncolor[gray]{0.9}} X|X|}
+\hline
+\rowcolor[gray]{0.8} \bf Opération & Description\\
+\hline
+\bf len(nom\_string) & Calcule la longueur d'un String \\
+\hline
+\bf nom\_string.lower() & Retourne le string en minuscule\\
+\hline
+\bf nom\_string.upper() & Retourne le string en majuscule\\
+\hline
+\bf str(nom\_variable) & Cast en String\\
+\hline
+\bf nom\_string1+nom\_string2 & Retourne les 2 String concaténées\\
+\hline
+\end{tabularx}
+\end{center}
+
+\subsection{Exercices}
+\begin{enumerate}
+\item \textbf{Exercice 1 :}    Concaténer les \texttt{Strings} "Hakuna Matata", "Mais quelle ", "phrase magnifique !" et affichez le résultat en majuscules ainsi que sa longueur.
+
+
+\item \textbf{Exercice 2 :} Caster les Strings a = "2" et b = "125.2" en nombre pour calculer a/b.\footnote{a et b doivent être impérativement définis en String au départ !} 
+\end{enumerate}
+
+% \begin{table}[h!]
+%     \centering
+%     \begin{tabular}{|c|c|}
+%         \hline
+%          Opération & Description\\
+%         \hline
+%         len(nom\_string) & Calcule la longueur d'un String \\
+%         \hline
+%         nom\_string.lower() & Retourne le string en minuscule \\
+%         \hline
+%         nom\_string.upper() & Retourne le string en majuscule \\
+%         \hline
+%          str(nom\_variable) & Cast en String  \\
+%         \hline
+%         nom\_string1+nom\_string2  & Retourne les 2 String concaténés \\
+%         \hline
+%     \end{tabular}
+%     \caption{Opérations String}
+%     \label{operStr}
+% \end{table}

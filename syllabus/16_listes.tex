@@ -1,0 +1,61 @@
+Une liste est une structure de données permettant de regrouper des données de manière à pouvoir y accéder librement.
+
+\begin{python}[caption = Exemples de listes]
+jeuxVideos = ['HeartStone', 'LoL', 'WoW', 'ClubPenguin']
+chiffres = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+\end{python}
+
+Accéder à un élément d'une liste se fait de la manière que pour un \texttt{String} (on commence à \textbf{0}).
+En effet, un \texttt{String} est en réalité une liste de caractères!
+
+\begin{python}[caption = Accès à une liste]
+chiffres = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+chiffre0 = chiffres[0]      #chiffre0 vaut 0
+chiffre3 = chiffres[3]      #chiffre3 vaut 3
+chiffres3a6 = chiffres[3:7] #chiffres3a6 vaut [3 4 5 6]
+\end{python}
+
+On peut modifier une liste de plusieurs façons : changer, supprimer, ajouter un ou plusieurs éléments.
+
+\begin{python}[caption = Modification de liste]
+my_list = ['a', 'b', 'c', 'd', 'e']
+
+#Modification
+my_list[3] = 'f'    #['a', 'b', 'c', 'f', 'e']
+#Suppression
+del my_list[3]      #['a', 'b', 'c', 'e']
+my_list.remove('e') #['a', 'b', 'c']
+#Ajout
+my_list.append('d') #['a', 'b', 'c', 'd']
+my_list + ['e']     #['a', 'b', 'c', 'd', 'e']
+\end{python}
+
+Les listes sont également assorties de quelques opérations très pratiques et souvent employées.
+
+\begin{python}[caption = Opérations sur les listes]
+my_list = ['a', 'b', 'c', 'd', 'e']
+
+#Longueur de la liste
+longueur = len(my_list)  #longueur vaut 5
+#Presence d un element
+'d' in my_list #vaut True 
+'f' in my_list #vaut False
+#Parcourir une liste
+for x in my_list : print (x) #imprime abcde
+#Retourner une liste
+my_list.reverse() #my_list vaut ['e', 'd', 'c', 'b', 'a']
+#Mettre une liste dans l ordre croissant
+my_list.sort() #my_list vaut ['a', 'b', 'c', 'd', 'e']
+\end{python}
+
+\subsubsection{Exercices}
+    \begin{enumerate}
+	\item
+		Créez une liste de Strings contenant au moins 5 fruits et légumes, puis triez la dans l'ordre alphabétique.
+	\item
+		Ajoutez à votre liste les éléments suivants \textbf{s'ils ne sont pas déjà présents} :
+		['banane', 'tomate', 'rutabaga', 'reine-claude', 'patate']
+\item
+		Éliminez de votre liste tous les éléments dont la première lettre commence par la lettre \textbf{p}.
+\end{enumerate}

@@ -1,0 +1,141 @@
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+\usepackage{pdfpages}
+\title{Game Jam du Louvain-li-Nux : Apprendre Python}
+\author{Florence Blondiaux\and Jean-Martin Vlaeminck}
+\date{01 Novembre 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{listings}   
+\usepackage{makecell}
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{9} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{9}  % for normal% incl. code langages info
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\newcommand\pythonstyle{\lstset{
+  language=Python,
+  backgroundcolor=\color{white}, %%%%%%%
+  basicstyle=\ttm,
+  otherkeywords={self},            
+  keywordstyle=\ttb\color{deepblue},
+  emph={MyClass,__init__},          
+  emphstyle=\ttb\color{deepred},    
+  stringstyle=\color{deepgreen},
+  commentstyle=\color{red},  %%%%%%%%
+  frame=tb,                         
+  showstringspaces=False            
+}}
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+\usepackage{lipsum}                         % faux texte
+\usepackage{fullpage}                       % utilisation de toute la page.
+\usepackage{csvsimple}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{xcolor}
+\definecolor{darkgreen}{rgb}{0.13,0.54,0.13}
+\usepackage{setspace}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\hyphenation{Python}
+\hyphenation{PYTHON}
+
+
+
+
+
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\chapter{Présentation de Python et installation des outils}
+
+\section{Présentation de Python}
+\input{02_presentation_python}
+
+\section{Qu'est-ce qu'un programme?}
+\input{03_programme}
+
+\section{Environnement de développement}
+\input{04_environnement_dev}
+
+\section{Premier programme}
+\input{05_premier_programme}
+
+
+
+
+
+
+
+
+\chapter{Programmer en Python}
+%Ordre d'apprentissage à discuter
+Maintenant que vous savez écrire un programme ainsi que l'exécuter et que vous avez écrit votre premier code, nous pouvons passer aux concepts de base de \textsc{Python}.
+
+\section{Les bonnes pratiques du programmeur}
+\input{06_bonnes_pratiques}
+
+\section{Affichage de texte}
+\input{07_affichage_texte}
+
+\section{Commentaires}
+\input{08_commentaires}
+
+\section{Variables}
+\label{variables}
+\input{09_variables}
+
+\section{Le type \texttt{str}}
+\input{10_string}
+
+\section{Interaction avec l'utilisateur}
+\input{11_actions_utilisateur}
+
+\section{Les conditions}
+\input{12_conditions}
+
+\section{Boucles}
+\input{13_boucles}
+
+\section{Listes}
+\input{16_listes}
+
+\section{Fonctions}
+\input{14_fonctions}
+
+\section{Portée des variables}
+\input{13b_portee_variables}
+
+\section{Modules}
+\input{15_modules}
+
+\section{Classes et objets}
+\input{17_classes}
+
+\chapter{La Game-Jam du Louvain-li-Nux}
+\section{Mini-jeu: Snake!}
+
+Pour vous permettre de pratiquer votre talent en programmation, nous vous proposons de créer un petit jeu vidéo, le célèbre Snake.
+
+Vous ne connaissez pas Snake ? Il s'agit d'un jeu vidéo, popularisé par Nokia, qui consiste à guider au clavier un serpent pour lui donner à manger des pommes apparaissant sur le plateau de jeu. Malheureusement pour lui, plus il mange plus il grandit, et il lui est défendu de se mordre lui-même (c-à-d de marcher sur son corps).
+
+Pour cela, nous allons utiliser une bibliothèque logiciel (un module) nommé Pygame, qui permet de développer rapidement des jeux vidéos en Python. Cette bibliothèque permet notamment d'avoir une face graphique pour votre jeu avec un minimum d'efforts.
+
+Dans le cadre de cette semaine, vous n'aurez pas l'occasion de coder l'ensemble du jeu; c'est bien trop long (et parfois pas très évident). A la place, nous vous proposons de compléter une partie des fonctions utilisées par ce jeu, et de partir du code existant pour l'améliorer et, qui sait, en faire le prochain jeu à succès de la planète :-) !
+
+\end{document}
