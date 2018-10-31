@@ -8,6 +8,7 @@
 
 import random, time, pygame, sys, os
 from pygame.locals import *
+from subprocess import Popen, PIPE, TimeoutExpired
 
 CWDIR = os.path.abspath(os.getcwd())
 print('Current Working Direction: {}'.format(CWDIR))
@@ -172,10 +173,13 @@ def main():
 
     showTextScreen('Tetromino')
     while True: # game loop
-        if random.randint(0, 1) == 0:
-            pygame.mixer.music.load(os.path.join(CWDIR, 'tetrisb.mid'))
-        else:
-            pygame.mixer.music.load(os.path.join(CWDIR, 'tetrisc.mid'))
+        try:
+            if random.randint(0, 1) == 0:
+                pygame.mixer.music.load(os.path.join(CWDIR, 'tetrisb.mid'))
+            else:
+                pygame.mixer.music.load(os.path.join(CWDIR, 'tetrisc.mid'))
+        except pygame.error:
+            print('This code needs timidity to run: run "sudo apt install timidity" (Debian only)')
         pygame.mixer.music.play(-1, 0.0)
         runGame()
         pygame.mixer.music.stop()
