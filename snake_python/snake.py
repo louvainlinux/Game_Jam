@@ -1,5 +1,6 @@
-from mySnake import *
+from mySnake_sol import *
 from sys import exit
+import pygame
 
 class Apple:
     x = 0
@@ -76,7 +77,7 @@ class Player:
         for i in range(0,self.length):
             surface.blit(image,(self.x[i],self.y[i]))
 
-    def isCollision(apple):
+    def myCollision(self, apple):
         if isCollision(apple.x,apple.y,self.x[0], self.y[0]):
             self.length = self.length + 1
             x = randint(0,19) * self.step
@@ -86,10 +87,10 @@ class Player:
                 y = randint(0,14) * self.step
 
 
-        apple.x = x
-        apple.y = y
+            apple.x = x
+            apple.y = y
 
-    def selfCollision():
+    def selfCollision(self):
         for i in range(2,self.length):
             if isCollision(self.x[0],self.y[0],self.x[i], self.y[i]):
                 return True
@@ -140,8 +141,8 @@ class App:
         self.other_player.update()
 
         # does snake eat apple?
-        self.other_player.isCollision(self.apple)
-        self.player.isCollision(self.apple)
+        self.other_player.myCollision(self.apple)
+        self.player.myCollision(self.apple)
 
         # does snake collide with itself?
         self.gameOverPlayer = self.other_player.selfCollision()
@@ -258,7 +259,7 @@ class Button():
 
 def restart(app):
     app.player = None
-    app.player = Player(3)
+    app.player = Player(3, 1, 1)
     app.apple = None
     app.apple = Apple(5,5)
     app.gameOver = False
