@@ -96,7 +96,7 @@ class Player:
                 return True
         return False
 
-    def wallCollision(width, height):
+    def myWallCollision(self, width, height):
         if (wallCollision(self.x[0], self.y[0], width, height)):
             return True
 
@@ -149,8 +149,8 @@ class App:
         self.gameOverOtherPlayer = self.other_player.selfCollision()
 
         # does snake collide with wall?
-        salf.gameOverPlayer = self.player.wallCollision(self.windowWidth, self.windowHeight)
-        self.gameOverOtherPlayer = self.other_player.wallCollision(self.apple)
+        self.gameOverPlayer = self.player.myWallCollision(self.windowWidth, self.windowHeight)
+        self.gameOverOtherPlayer = self.other_player.myWallCollision(self.apple)
 
         pass
 
