@@ -1,10 +1,3 @@
-"""
-<<<<<<< HEAD
-Created on Thu Jul 12 11:46:10 2018
-it's my dick
-=======
-Created on Thu Jul 12 11:46:10 2018 
->>>>>>> 36db20fa933d07fc63461ec6335a85f70c46cedb
 @author: Quentin
 """
 from pygame.locals import *
