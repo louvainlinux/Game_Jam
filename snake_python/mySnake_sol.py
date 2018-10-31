@@ -1,6 +1,6 @@
 """
 Created on Thu Jul 12 11:46:10 2018
-
+it's my dick    
 @author: Quentin
 """
 from pygame.locals import *
