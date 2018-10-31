@@ -1,4 +1,4 @@
-from mySnake import *
+from mySnake_sol import *
 from sys import exit
 
 class Apple:
@@ -258,7 +258,7 @@ class Button():
 
 def restart(app):
     app.player = None
-    app.player = Player(3)
+    app.player = Player(3, 1, 1)
     app.apple = None
     app.apple = Apple(5,5)
     app.gameOver = False
