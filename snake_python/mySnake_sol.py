@@ -1,3 +1,4 @@
+"""
 @author: Quentin
 """
 from pygame.locals import *
