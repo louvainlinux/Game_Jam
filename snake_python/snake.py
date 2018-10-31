@@ -119,7 +119,7 @@ class App:
         self.gameOverPlayer = False
         self.gameOverOtherPlayer = False
         self.player = Player(3, 0, 0)
-        self.other_player = Player(3, 1, 1)
+        self.other_player = Player(3, 0, self.windowHeight-50)
         self.apple = Apple(5,5)
         self.window = None
         self.button = None
