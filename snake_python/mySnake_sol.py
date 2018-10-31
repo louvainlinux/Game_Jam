@@ -1,6 +1,5 @@
 """
-Created on Thu Jul 12 11:46:10 2018
-
+Created on Thu Jul 12 11:46:10 2018 
 @author: Quentin
 """
 from pygame.locals import *
@@ -16,7 +15,7 @@ def wallCollision(x,y,width,height):
 
 def valid_pos(app, x, y):
         for i in range(0,app.player.length):
-            if ((app.player.x[i] == x and app.player.y[i] == y) or (app.other_player.x[i] == x and app.player.y[i] == y)):
+            if ((app.player.x[i] == x and app.player.y[i] == y) or (app.other_player.x[i] == x and app.other_player.y[i] == y)):
                 return False
         return True
 
