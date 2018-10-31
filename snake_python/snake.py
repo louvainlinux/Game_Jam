@@ -150,7 +150,7 @@ class App:
 
         # does snake collide with wall?
         self.gameOverPlayer = self.player.myWallCollision(self.windowWidth, self.windowHeight)
-        self.gameOverOtherPlayer = self.other_player.myWallCollision(self.apple)
+        self.gameOverOtherPlayer = self.other_player.myWallCollision(self.windowWidth, self.windowHeight)
 
         pass
 
